@@ -1,0 +1,33 @@
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\bin\Debug\EmployeeClassTester.exe
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\bin\Debug\EmployeeClassTester.pdb
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\bin\Debug\Employee.dll
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\bin\Debug\Employee.pdb
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\Pro_SSRS.Tester.resources
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\Pro_SSRS.Properties.Resources.resources
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\ResGen.read.1.tlog
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\ResGen.write.1.tlog
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\EmployeeClassTester.exe
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class Tester\obj\Debug\EmployeeClassTester.pdb
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\bin\Debug\EmployeeClassTester.exe
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\bin\Debug\EmployeeClassTester.pdb
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\bin\Debug\Employee.dll
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\bin\Debug\Employee.pdb
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\Pro_SSRS.Tester.resources
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\Pro_SSRS.Properties.Resources.resources
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\EmployeeClassTester.exe
+C:\PRO_SSRS_Final\Chapter 5\Employee Class Tester\obj\Debug\EmployeeClassTester.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\bin\Debug\EmployeeClassTester.exe
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\bin\Debug\EmployeeClassTester.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\bin\Debug\Employee.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\bin\Debug\Employee.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\Pro_SSRS.Tester.resources
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\Pro_SSRS.Properties.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\EmployeeClassTester.exe
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester\obj\Debug\EmployeeClassTester.pdb

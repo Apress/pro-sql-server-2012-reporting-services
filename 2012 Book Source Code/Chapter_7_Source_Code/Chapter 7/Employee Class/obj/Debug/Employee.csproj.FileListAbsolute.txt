@@ -1,0 +1,18 @@
+C:\Users\shawn\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\Employee.dll.config
+C:\Users\shawn\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\Employee.dll
+C:\Users\shawn\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\Employee.pdb
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class\obj\Debug\Employee.dll
+C:\Users\shawn\Desktop\Dropbox\Writing\SSRS Denali\Extras\Chapter 5\Employee Class\obj\Debug\Employee.pdb
+C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\Employee.dll.config
+C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\Employee.dll
+C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\Employee.pdb
+C:\PRO_SSRS_Final\Chapter 5\Employee Class\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 5\Employee Class\obj\Debug\Employee.dll
+C:\PRO_SSRS_Final\Chapter 5\Employee Class\obj\Debug\Employee.pdb
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Employee.dll.config
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Employee.dll
+C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Employee.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\Employee Class\obj\Debug\Employee.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee Class\obj\Debug\Employee.pdb

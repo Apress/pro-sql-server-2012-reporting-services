@@ -1,0 +1,10 @@
+﻿<DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" xsi:type="RelationalDataSource" dwd:design-time-name="c5895ee6-6f48-40ac-a09f-347b8e6b9eac" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Pro SSRS</ID>
+  <Name>Pro SSRS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <ConnectionString>Data Source=Localhost;Initial Catalog=Pro_SSRS;Integrated Security=True</ConnectionString>
+  <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+  <ManagedProvider>System.Data.SqlClient</ManagedProvider>
+  <Timeout>PT0S</Timeout>
+</DataSource>

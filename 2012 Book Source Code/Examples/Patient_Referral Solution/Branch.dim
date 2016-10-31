@@ -1,0 +1,302 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="069b28d2-1524-49fc-8f1a-fa3ab6e361ad" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Branch</ID>
+  <Name>Branch</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00.0000000-06:00</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00.0000000-06:00</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00.0000000-06:00</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="389cc2ad-4fd4-47bb-9ae3-c25a02ba3e13">
+    <DataSourceViewID>HW Analysis</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="b8861485-409b-4821-a3be-72fd6a3802f6">
+      <ID>Branch</ID>
+      <Name>Branch</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bb993b63-3d7f-44be-a4dc-35d1a1a48df2">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e593013e-2cd6-4d33-a74e-bef8276f339b">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>BranchID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="030e2bbd-1ffd-492e-a9d5-8c89f15f94b3">
+          <AttributeID>Region ID</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3fab78e2-3d29-4a77-88f1-715ca1ee7060">
+          <AttributeID>Branch Name</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2a5c8003-e47b-4499-9681-b477b6e921ad">
+          <AttributeID>Address1</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="52e135e7-9ae6-4e37-a297-d4e95e3e3855">
+          <AttributeID>Address2</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a79f2782-c5ec-4911-a6ad-f1677845e3ee">
+          <AttributeID>City</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="39f2aa92-6255-4c59-a144-99ec6b95d9f4">
+          <AttributeID>State</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="46fbc6d8-7e1a-4690-a38f-af79f6e4bc86">
+          <AttributeID>Zip</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ea9e7125-a7a2-41a9-aab9-3e4d3952105f">
+          <AttributeID>Phone</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="330790f3-cac9-465b-98fb-2ab81e566e62">
+          <AttributeID>Fax</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="82c04996-399c-4660-a15e-346791e76dad">
+          <AttributeID>Email</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ba5465c-530f-4625-839a-c3d2c1e30acd">
+          <AttributeID>Server ID</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="642799c6-eab7-444c-833a-81d10098e34d">
+          <AttributeID>Brvmnt Coord</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d158b6f9-9abf-40ff-b095-901beb24dc3d">
+          <AttributeID>CMS Assigned ID</AttributeID>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="c1d2a736-e72b-4b18-aee3-51cac15a8dfd">
+      <ID>Region ID</ID>
+      <Name>Region ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="efff8ff8-b664-469e-915d-d6dcf740cebe">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e23c69ba-6f73-401d-882a-d85eb04f2131">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>RegionID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="c051e779-f6e3-4b6a-b8c2-2e0c3595d9ff">
+      <ID>Branch Name</ID>
+      <Name>Branch Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4faa75f1-ea8e-4c29-8a3f-69d8f7e85a75">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6db704c6-c1f6-4bd7-81b8-289334fdb2fd">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>BranchName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="85975f96-2f94-4557-bae0-166ff6b10011">
+      <ID>Address1</ID>
+      <Name>Address1</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="44660a35-b725-4f0b-ba72-9dd3c9d1c561">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7bee8520-8bb2-4626-ab05-dc6e1c46c25d">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>Address1</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="6c632dc0-50a7-4c70-a2b2-4b18b71dd097">
+      <ID>Address2</ID>
+      <Name>Address2</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="44160cbb-3a65-4da4-b4f7-84d3cacbc1ee">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a976d5a5-1530-4cf1-95ce-66b354c75c95">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>Address2</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="259315aa-96b6-4e85-8b91-32a97e0b02fc">
+      <ID>City</ID>
+      <Name>City</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="17f3c319-a10c-44fa-b458-5ccf75ecdeaf">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d0213855-b6fc-4bfb-bc2e-ffcccada21ee">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>City</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="d77f31ca-6008-42ac-8448-c502e50c87b9">
+      <ID>State</ID>
+      <Name>State</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="80546570-27e9-4af0-9fda-bd433bddf48b">
+          <DataType>WChar</DataType>
+          <DataSize>2</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e61cd523-1797-4fe9-8abe-14e47d9895ce">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>State</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="5a8614b5-f451-42e7-8373-7cf6feb175f1">
+      <ID>Zip</ID>
+      <Name>Zip</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bbba21c2-fe18-460f-9959-9af7fcf1dacc">
+          <DataType>WChar</DataType>
+          <DataSize>13</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c6bd2114-01a0-4df6-973e-46699b5cdba6">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>Zip</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="a3a0de9e-9726-4e95-b29b-a8bdf8713e9e">
+      <ID>Phone</ID>
+      <Name>Phone</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ed61b93a-8eed-4dad-8494-c13023f79125">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cd86117c-883b-47da-a399-626fb32f1b65">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>Phone</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="85f669a5-ade3-4616-83bd-22eee28888b5">
+      <ID>Fax</ID>
+      <Name>Fax</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ff29aa3c-7d4e-4633-8877-30aefa2cd673">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a0972bf3-2a32-4a87-8008-1f8de834017f">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>Fax</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="fef6717b-04d8-4c24-a361-8546664d05ae">
+      <ID>Email</ID>
+      <Name>Email</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5b08b15f-73c8-4fe7-998b-114da880974c">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="239e6c84-d12a-4b33-a7b6-b9b98a32181f">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>Email</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="a52a87b7-a8d4-45dc-a1a8-18bacb01b1c6">
+      <ID>Server ID</ID>
+      <Name>Server ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c0513b6-d6e2-4a04-a338-fc5400759ac2">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e5ba8cf8-10f9-4774-b3f8-6f0c60ea92af">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>ServerID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="788c4d7b-a665-4510-98ab-fd58d717b34d">
+      <ID>Brvmnt Coord</ID>
+      <Name>Brvmnt Coord</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="487b685a-a2b9-47b8-a57d-1578c926aa6e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4ffc2dfc-5290-491b-b388-f85e3245ff7b">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>BrvmntCoord</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="736d3004-47a4-49f4-b59b-d6bcec1360c8">
+      <ID>CMS Assigned ID</ID>
+      <Name>CMS Assigned ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0f9e5315-d108-483b-8356-c4e15c8d7e74">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf38e622-c607-45ed-b3e9-b2f99c1f86bc">
+            <TableID>dbo_Branch</TableID>
+            <ColumnID>CMSAssignedID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

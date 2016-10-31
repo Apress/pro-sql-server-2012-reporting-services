@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Language>en-US</Language>
+  <rd:GridSpacing>0.125in</rd:GridSpacing>
+  <Width>11in</Width>
+  <TopMargin>0in</TopMargin>
+  <BottomMargin>0in</BottomMargin>
+  <LeftMargin>0in</LeftMargin>
+  <RightMargin>0in</RightMargin>
+  <PageWidth>11in</PageWidth>
+  <PageHeight>8.5in</PageHeight>
+  <Body>
+    <Height>0in</Height>
+    <Style />
+    <ReportItems>
+      <Textbox Name="Title">
+        <Value>Patient Face Sheet</Value>
+        <CanGrow>true</CanGrow>
+        <Width>6.5in</Width>
+        <Height>0.5in</Height>
+        <Left>0.5in</Left>
+        <Top>0.5in</Top>
+        <Style>
+          <FontSize>18pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+          <FontWeight>Bold</FontWeight>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:Watermark</Name>
+            <Value>Click to add title</Value>
+          </CustomProperty>
+        </CustomProperties>
+      </Textbox>
+      <Table Name="table">
+        <TableColumns>
+          <TableColumn>
+            <Width>1.2217in</Width>
+            <Visibility>
+              <Hidden>=Fields!BranchName.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.81779in</Width>
+            <Visibility>
+              <Hidden>=Fields!PatID.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.23283in</Width>
+            <Visibility>
+              <Hidden>=Fields!PatientName.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.90509in</Width>
+            <Visibility>
+              <Hidden>=Fields!Diagnosis.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.16667in</Width>
+            <Visibility>
+              <Hidden>=Fields!StartOfCare.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.625in</Width>
+            <Visibility>
+              <Hidden>=Fields!Address1.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.99884in</Width>
+            <Visibility>
+              <Hidden>=Fields!City.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.75502in</Width>
+            <Visibility>
+              <Hidden>=Fields!State.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+          <TableColumn>
+            <Width>0.62877in</Width>
+            <Visibility>
+              <Hidden>=Fields!Zip.IsMissing</Hidden>
+            </Visibility>
+          </TableColumn>
+        </TableColumns>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BranchName_Header">
+                      <Value>Branch Name</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!BranchName.Value</SortExpression>
+                        <SortExpressionScope>table_BranchName</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PatID_Header2">
+                      <Value>Pat ID</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!PatID.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PatientName_Header">
+                      <Value>Patient Name</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!PatientName.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <TextAlign>Left</TextAlign>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Diagnosis_Header">
+                      <Value>Diagnosis</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Diagnosis.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="StartOfCare_Header">
+                      <Value>Start Of Care</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!StartOfCare.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Address1_Header">
+                      <Value>Address 1</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Address1.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="City_Header">
+                      <Value>City</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!City.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="State_Header">
+                      <Value>State</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!State.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Zip_Header">
+                      <Value>Zip</Value>
+                      <CanGrow>true</CanGrow>
+                      <UserSort>
+                        <SortExpression>=Fields!Zip.Value</SortExpression>
+                        <SortExpressionScope>table_PatientCensus</SortExpressionScope>
+                      </UserSort>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>#528ae7</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <FontWeight>Bold</FontWeight>
+                        <Language>en-US</Language>
+                      </Style>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <RepeatOnNewPage>true</RepeatOnNewPage>
+          <FixedHeader>true</FixedHeader>
+        </Header>
+        <TableGroups>
+          <TableGroup>
+            <Grouping Name="table_BranchName">
+              <GroupExpressions>
+                <GroupExpression>=Fields!BranchName.Value</GroupExpression>
+              </GroupExpressions>
+            </Grouping>
+            <Sorting>
+              <SortBy>
+                <SortExpression>=IIf(True, Fields!BranchName.Value, Nothing)</SortExpression>
+              </SortBy>
+            </Sorting>
+          </TableGroup>
+        </TableGroups>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BranchName_Value">
+                      <Value>=Fields!BranchName.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <HideDuplicates>table_BranchName</HideDuplicates>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Left>Solid</Left>
+                          <Right>Solid</Right>
+                          <Bottom>=Iif( RowNumber("table_BranchName") = CountRows("table_BranchName"), "Solid", Nothing)</Bottom>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PatID_Value2">
+                      <Value>=Fields!PatID.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Format>g</Format>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="PatientName_Value">
+                      <Value>=Fields!PatientName.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Action>
+                        <Drillthrough>
+                          <ReportName>=DataSources!dataSource1.DataSourceReference</ReportName>
+                          <Parameters>
+                            <Parameter Name="rs:EntityID">
+                              <Value>G6f5421e8-c588-4328-88a2-274e87b4221e</Value>
+                            </Parameter>
+                            <Parameter Name="rs:DrillType">
+                              <Value>Detail</Value>
+                            </Parameter>
+                            <Parameter Name="rs:Command">
+                              <Value>Drillthrough</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughSourceQuery">
+                              <Value>=DataSets!dataSet.RewrittenCommandText</Value>
+                            </Parameter>
+                            <Parameter Name="DrillthroughContext">
+                              <Value>=CreateDrillthroughContext()</Value>
+                            </Parameter>
+                          </Parameters>
+                        </Drillthrough>
+                      </Action>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Format>g</Format>
+                        <TextAlign>Left</TextAlign>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Diagnosis_Value">
+                      <Value>=Fields!Diagnosis.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="StartOfCare_Value">
+                      <Value>=Fields!StartOfCare.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Format>d</Format>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Address1_Value">
+                      <Value>=Fields!Address1.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="City_Value">
+                      <Value>=Fields!City.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="State_Value">
+                      <Value>=Fields!State.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="Zip_Value">
+                      <Value>=Fields!Zip.Value</Value>
+                      <CanGrow>true</CanGrow>
+                      <Style>
+                        <BackgroundColor>White</BackgroundColor>
+                        <FontSize>8pt</FontSize>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                        <BorderColor>
+                          <Default>#c0c0c0</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>Tahoma</FontFamily>
+                        <Language>en-US</Language>
+                      </Style>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.25in</Height>
+            </TableRow>
+          </TableRows>
+          <Grouping Name="table_PatientCensus">
+            <GroupExpressions>
+              <GroupExpression>=Fields!PatientCensus.Value</GroupExpression>
+            </GroupExpressions>
+          </Grouping>
+          <Sorting>
+            <SortBy>
+              <SortExpression>=Fields!PatID.Value</SortExpression>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=Fields!PatientName.Value</SortExpression>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=Fields!Diagnosis.Value</SortExpression>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr1.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr4.Value, Nothing)</SortExpression>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr5.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+            <SortBy>
+              <SortExpression>=IIf(True, Fields!expr6.Value, Nothing)</SortExpression>
+              <Direction>Descending</Direction>
+            </SortBy>
+          </Sorting>
+        </Details>
+        <NoRows>No data was found that matched your report criteria.</NoRows>
+        <DataSetName>dataSet</DataSetName>
+        <Width>0in</Width>
+        <Height>0in</Height>
+        <Left>0.5in</Left>
+        <Top>1.25in</Top>
+        <Style />
+      </Table>
+      <Textbox Name="TotalRows">
+        <Value>=String.Format("Total Patient Censuses" &amp; Chr(58) &amp; " {0}", COUNTROWS("dataSet"))</Value>
+        <CanGrow>true</CanGrow>
+        <Width>6.5in</Width>
+        <Height>0.25in</Height>
+        <Left>0.5in</Left>
+        <Top>3in</Top>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+          <PaddingBottom>3pt</PaddingBottom>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>TotalRows</Value>
+          </CustomProperty>
+        </CustomProperties>
+      </Textbox>
+      <Textbox Name="FilterDescription">
+        <Value>Filter: All Patient Censuses</Value>
+        <CanGrow>true</CanGrow>
+        <Width>6.5in</Width>
+        <Height>0.25in</Height>
+        <Left>0.5in</Left>
+        <Top>3.5in</Top>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+          <PaddingBottom>3pt</PaddingBottom>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>FilterDescription</Value>
+          </CustomProperty>
+        </CustomProperties>
+      </Textbox>
+    </ReportItems>
+  </Body>
+  <DataSources>
+    <DataSource Name="dataSource1">
+      <rd:DataSourceID>da8a5a83-f41c-40e9-9253-3074b7c297c0</rd:DataSourceID>
+      <DataSourceReference>/Models/Patient Census</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <DataSourceName>dataSource1</DataSourceName>
+        <CommandText>&lt;SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign"&gt;
+  &lt;Hierarchies&gt;
+    &lt;Hierarchy&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Patient Census--&gt;
+        &lt;EntityID&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Groupings&gt;
+        &lt;Grouping Name="Branch Name"&gt;
+          &lt;Expression Name="Branch Name"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Branch Name--&gt;
+              &lt;AttributeID&gt;G9f4dfc1b-0d32-48bd-9cbe-a59cdd307b86&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="Patient Census"&gt;
+          &lt;Expression Name="Patient Census"&gt;
+            &lt;EntityRef&gt;
+              &lt;!--Patient Census--&gt;
+              &lt;EntityID&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/EntityID&gt;
+            &lt;/EntityRef&gt;
+          &lt;/Expression&gt;
+          &lt;Details&gt;
+            &lt;Expression Name="Pat ID"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Pat ID--&gt;
+                &lt;AttributeID&gt;G9e406764-ea1a-4b38-90ec-03a71c12d2dd&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="Patient Name"&gt;
+              &lt;AttributeRef&gt;
+                &lt;AttributeName&gt;expr2&lt;/AttributeName&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="Diagnosis"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Diagnosis--&gt;
+                &lt;AttributeID&gt;G2f5b7ebd-454f-465b-aed9-e7e2d99d602d&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="Start Of Care"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Start Of Care--&gt;
+                &lt;AttributeID&gt;Ga164253a-18b7-4ef6-9c75-fc2a073d6183&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="Address 1"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Address 1--&gt;
+                &lt;AttributeID&gt;G0fe0f277-3626-497b-abf3-40385c4b296d&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="City"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--City--&gt;
+                &lt;AttributeID&gt;Ge0ef23be-d795-49a0-88a3-6e87594ab3d3&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="State"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--State--&gt;
+                &lt;AttributeID&gt;G480b62e2-e3df-4499-9aee-aa0471e381a4&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="Zip"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Zip--&gt;
+                &lt;AttributeID&gt;Ge5c76203-a164-45a2-b64c-412aa5cedef1&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr1"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Pat Program ID--&gt;
+                &lt;AttributeID&gt;G4792548e-e8f3-4339-b8f4-08f2da63aa2a&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr4"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Pat Last Name--&gt;
+                &lt;AttributeID&gt;Gd0704e6f-db4e-4747-8f44-28f2bc5bc061&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr5"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--DOB--&gt;
+                &lt;AttributeID&gt;Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+            &lt;Expression Name="expr6"&gt;
+              &lt;AttributeRef&gt;
+                &lt;!--Date Entered--&gt;
+                &lt;AttributeID&gt;Ge829098e-4f74-4204-b4c4-c00697a69d6b&lt;/AttributeID&gt;
+              &lt;/AttributeRef&gt;
+            &lt;/Expression&gt;
+          &lt;/Details&gt;
+        &lt;/Grouping&gt;
+      &lt;/Groupings&gt;
+      &lt;Filter&gt;
+        &lt;Expression Name="filter"&gt;
+          &lt;Literal&gt;
+            &lt;DataType&gt;Boolean&lt;/DataType&gt;
+            &lt;Value&gt;true&lt;/Value&gt;
+          &lt;/Literal&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Filter" /&gt;
+            &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:AutoChangeBaseEntity" /&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;expr3&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Filter&gt;
+    &lt;/Hierarchy&gt;
+  &lt;/Hierarchies&gt;
+  &lt;CalculatedAttributes&gt;
+    &lt;Expression Name="expr2"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;Concat&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Concat&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;Function&gt;
+                    &lt;FunctionName&gt;RTrim&lt;/FunctionName&gt;
+                    &lt;Arguments&gt;
+                      &lt;Expression&gt;
+                        &lt;AttributeRef&gt;
+                          &lt;!--Pat Last Name--&gt;
+                          &lt;AttributeID&gt;Gd0704e6f-db4e-4747-8f44-28f2bc5bc061&lt;/AttributeID&gt;
+                        &lt;/AttributeRef&gt;
+                      &lt;/Expression&gt;
+                    &lt;/Arguments&gt;
+                  &lt;/Function&gt;
+                &lt;/Expression&gt;
+                &lt;Expression&gt;
+                  &lt;Literal&gt;
+                    &lt;DataType&gt;String&lt;/DataType&gt;
+                    &lt;Value&gt;, &lt;/Value&gt;
+                  &lt;/Literal&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;RTrim&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;AttributeRef&gt;
+                    &lt;!--Pat First Name--&gt;
+                    &lt;AttributeID&gt;Gf697d34a-c2e5-4edd-bf83-c4fe027ae836&lt;/AttributeID&gt;
+                  &lt;/AttributeRef&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Patient Name&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+  &lt;/CalculatedAttributes&gt;
+&lt;/SemanticQuery&gt;</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BranchName">
+          <DataField>Branch Name</DataField>
+        </Field>
+        <Field Name="PatientCensus">
+          <DataField>Patient Census</DataField>
+        </Field>
+        <Field Name="PatID">
+          <DataField>Pat ID</DataField>
+        </Field>
+        <Field Name="PatientName">
+          <DataField>Patient Name</DataField>
+        </Field>
+        <Field Name="Diagnosis">
+          <DataField>Diagnosis</DataField>
+        </Field>
+        <Field Name="StartOfCare">
+          <DataField>Start Of Care</DataField>
+        </Field>
+        <Field Name="Address1">
+          <DataField>Address 1</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="State">
+          <DataField>State</DataField>
+        </Field>
+        <Field Name="Zip">
+          <DataField>Zip</DataField>
+        </Field>
+        <Field Name="expr1">
+          <DataField>expr1</DataField>
+        </Field>
+        <Field Name="expr4">
+          <DataField>expr4</DataField>
+        </Field>
+        <Field Name="expr5">
+          <DataField>expr5</DataField>
+        </Field>
+        <Field Name="expr6">
+          <DataField>expr6</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+</Report>

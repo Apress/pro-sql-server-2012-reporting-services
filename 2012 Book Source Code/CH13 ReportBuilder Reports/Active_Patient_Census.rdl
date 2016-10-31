@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Language>en-US</Language>
+  <rd:GridSpacing>0.125in</rd:GridSpacing>
+  <Width>7.5in</Width>
+  <TopMargin>0.5in</TopMargin>
+  <BottomMargin>0.5in</BottomMargin>
+  <LeftMargin>0.5in</LeftMargin>
+  <RightMargin>0.5in</RightMargin>
+  <PageWidth>8.5in</PageWidth>
+  <PageHeight>11in</PageHeight>
+  <Body>
+    <Height>0in</Height>
+    <Style />
+    <ReportItems>
+      <Textbox Name="Title">
+        <Value>Active Patient Census</Value>
+        <CanGrow>true</CanGrow>
+        <Width>6.5in</Width>
+        <Height>0.5in</Height>
+        <Left>0.5in</Left>
+        <Top>0.5in</Top>
+        <Style>
+          <FontSize>18pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+          <FontFamily>Tahoma</FontFamily>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:Watermark</Name>
+            <Value>Click to add title</Value>
+          </CustomProperty>
+        </CustomProperties>
+      </Textbox>
+      <Chart Name="chart">
+        <Type>Column</Type>
+        <Subtype>Plain</Subtype>
+        <Title>
+          <Style>
+            <FontSize>16pt</FontSize>
+          </Style>
+        </Title>
+        <Palette>Default</Palette>
+        <ThreeDProperties>
+          <Enabled>true</Enabled>
+          <Rotation>10</Rotation>
+          <Inclination>25</Inclination>
+          <WallThickness>50</WallThickness>
+          <DrawingStyle>Cylinder</DrawingStyle>
+        </ThreeDProperties>
+        <Legend>
+          <Style>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+          </Style>
+          <Position>BottomCenter</Position>
+        </Legend>
+        <CategoryAxis>
+          <Axis>
+            <Title>
+              <Style />
+            </Title>
+            <Style />
+            <MajorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Visible>true</Visible>
+          </Axis>
+        </CategoryAxis>
+        <ValueAxis>
+          <Axis>
+            <Title>
+              <Style />
+            </Title>
+            <Style />
+            <MajorGridLines>
+              <ShowGridLines>true</ShowGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MajorGridLines>
+            <MinorGridLines>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </MinorGridLines>
+            <MajorTickMarks>Outside</MajorTickMarks>
+            <Min>0</Min>
+            <Margin>true</Margin>
+            <Visible>true</Visible>
+            <Scalar>true</Scalar>
+          </Axis>
+        </ValueAxis>
+        <SeriesGroupings>
+          <SeriesGrouping>
+            <StaticSeries>
+              <StaticMember>
+                <Label>Patient Count</Label>
+              </StaticMember>
+            </StaticSeries>
+          </SeriesGrouping>
+        </SeriesGroupings>
+        <CategoryGroupings>
+          <CategoryGrouping>
+            <DynamicCategories>
+              <Grouping Name="chart_BranchName">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!BranchName.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Label>=Fields!BranchName.Value</Label>
+            </DynamicCategories>
+          </CategoryGrouping>
+        </CategoryGroupings>
+        <ChartData>
+          <ChartSeries>
+            <DataPoints>
+              <DataPoint>
+                <DataValues>
+                  <DataValue>
+                    <Value>=AGGREGATE(Fields!PatientCount.Value)</Value>
+                  </DataValue>
+                </DataValues>
+                <DataLabel>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                  <Rotation>-10</Rotation>
+                  <Visible>true</Visible>
+                </DataLabel>
+                <Action>
+                  <Drillthrough>
+                    <ReportName>=DataSources!dataSource1.DataSourceReference</ReportName>
+                    <Parameters>
+                      <Parameter Name="rs:EntityID">
+                        <Value>G6f5421e8-c588-4328-88a2-274e87b4221e</Value>
+                      </Parameter>
+                      <Parameter Name="rs:DrillType">
+                        <Value>List</Value>
+                      </Parameter>
+                      <Parameter Name="rs:Command">
+                        <Value>Drillthrough</Value>
+                      </Parameter>
+                      <Parameter Name="DrillthroughSourceQuery">
+                        <Value>=DataSets!dataSet.RewrittenCommandText</Value>
+                      </Parameter>
+                      <Parameter Name="DrillthroughContext">
+                        <Value>=CreateDrillthroughContext()</Value>
+                      </Parameter>
+                    </Parameters>
+                  </Drillthrough>
+                </Action>
+                <DataElementOutput>NoOutput</DataElementOutput>
+              </DataPoint>
+            </DataPoints>
+          </ChartSeries>
+        </ChartData>
+        <PlotArea>
+          <Style>
+            <BackgroundColor>LightGrey</BackgroundColor>
+            <BorderStyle>
+              <Default>Solid</Default>
+            </BorderStyle>
+          </Style>
+        </PlotArea>
+        <DataSetName>dataSet</DataSetName>
+        <NoRows>No data was found that matched your report criteria.</NoRows>
+        <Width>3.5in</Width>
+        <Height>4.5in</Height>
+        <Left>0.5in</Left>
+        <Top>1.125in</Top>
+        <Style>
+          <BackgroundColor>White</BackgroundColor>
+        </Style>
+      </Chart>
+      <Textbox Name="FilterDescription">
+        <Value>Filter: All Patient Censuses</Value>
+        <CanGrow>true</CanGrow>
+        <Width>6.5in</Width>
+        <Height>0.25in</Height>
+        <Left>0.5in</Left>
+        <Top>5.75in</Top>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingRight>3pt</PaddingRight>
+          <PaddingTop>3pt</PaddingTop>
+          <PaddingBottom>3pt</PaddingBottom>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>FilterDescription</Value>
+          </CustomProperty>
+        </CustomProperties>
+      </Textbox>
+    </ReportItems>
+  </Body>
+  <DataSources>
+    <DataSource Name="dataSource1">
+      <rd:DataSourceID>42d78da2-aeed-485d-97aa-52a9228fc8da</rd:DataSourceID>
+      <DataSourceReference>/Models/Patient Census</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <DataSourceName>dataSource1</DataSourceName>
+        <CommandText>&lt;SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign"&gt;
+  &lt;Hierarchies&gt;
+    &lt;Hierarchy&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Patient Census--&gt;
+        &lt;EntityID&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Groupings&gt;
+        &lt;Grouping Name="Branch Name"&gt;
+          &lt;Expression Name="Branch Name"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Branch Name--&gt;
+              &lt;AttributeID&gt;G9f4dfc1b-0d32-48bd-9cbe-a59cdd307b86&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+      &lt;/Groupings&gt;
+      &lt;Filter&gt;
+        &lt;Expression Name="filter"&gt;
+          &lt;Literal&gt;
+            &lt;DataType&gt;Boolean&lt;/DataType&gt;
+            &lt;Value&gt;true&lt;/Value&gt;
+          &lt;/Literal&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Filter" /&gt;
+            &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:AutoChangeBaseEntity" /&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;expr1&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Filter&gt;
+    &lt;/Hierarchy&gt;
+  &lt;/Hierarchies&gt;
+  &lt;MeasureGroups&gt;
+    &lt;MeasureGroup&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Patient Census--&gt;
+        &lt;EntityID&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Measures&gt;
+        &lt;Expression Name="Patient Count"&gt;
+          &lt;AttributeRef&gt;
+            &lt;AttributeName&gt;expr2&lt;/AttributeName&gt;
+          &lt;/AttributeRef&gt;
+        &lt;/Expression&gt;
+      &lt;/Measures&gt;
+    &lt;/MeasureGroup&gt;
+  &lt;/MeasureGroups&gt;
+  &lt;CalculatedAttributes&gt;
+    &lt;Expression Name="expr3"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Discharge Date--&gt;
+              &lt;AttributeID&gt;Gf20a7af8-819d-458c-90d9-0fbf59f65956&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Null /&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:FilterCondition" /&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Active Patients&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:Filter" /&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:Design"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;expr4&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr4"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;AttributeRef&gt;
+                    &lt;!--Discharge Date--&gt;
+                    &lt;AttributeID&gt;Gf20a7af8-819d-458c-90d9-0fbf59f65956&lt;/AttributeID&gt;
+                  &lt;/AttributeRef&gt;
+                &lt;/Expression&gt;
+                &lt;Expression&gt;
+                  &lt;Null /&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+            &lt;CustomProperties&gt;
+              &lt;CustomProperty Name="qd:FilterCondition" /&gt;
+            &lt;/CustomProperties&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Null /&gt;
+            &lt;CustomProperties&gt;
+              &lt;CustomProperty Name="qd:Unspecified" /&gt;
+            &lt;/CustomProperties&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:Filter" /&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="expr2"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;Integer&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;CountDistinct&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;Function&gt;
+                    &lt;FunctionName&gt;Filter&lt;/FunctionName&gt;
+                    &lt;Arguments&gt;
+                      &lt;Expression&gt;
+                        &lt;AttributeRef&gt;
+                          &lt;!--Pat ID--&gt;
+                          &lt;AttributeID&gt;G9e406764-ea1a-4b38-90ec-03a71c12d2dd&lt;/AttributeID&gt;
+                        &lt;/AttributeRef&gt;
+                      &lt;/Expression&gt;
+                      &lt;Expression&gt;
+                        &lt;AttributeRef&gt;
+                          &lt;AttributeName&gt;expr3&lt;/AttributeName&gt;
+                        &lt;/AttributeRef&gt;
+                      &lt;/Expression&gt;
+                    &lt;/Arguments&gt;
+                  &lt;/Function&gt;
+                  &lt;CustomProperties&gt;
+                    &lt;CustomProperty Name="qd:DefaultName"&gt;
+                      &lt;Value xsi:type="xsd:string"&gt;Pat ID[2]&lt;/Value&gt;
+                    &lt;/CustomProperty&gt;
+                  &lt;/CustomProperties&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:DisplayName"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Patient Count&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;G6f5421e8-c588-4328-88a2-274e87b4221e&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+  &lt;/CalculatedAttributes&gt;
+&lt;/SemanticQuery&gt;</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="BranchName">
+          <DataField>Branch Name</DataField>
+        </Field>
+        <Field Name="PatientCount">
+          <DataField>Patient Count</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+</Report>

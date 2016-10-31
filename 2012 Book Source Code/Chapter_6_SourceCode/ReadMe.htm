@@ -1,0 +1,22 @@
+<html>
+<body style="font-family: Verdana">
+    The examples in this chapter depend on the proper initial setup and configuration
+    of your system. It will also use the same database that was used in previous
+    chapters.<br />
+    <br />
+    This example was designed to all be run off the same system with references set
+    to localhost for the database and localhost for the report server. If this doesn't match
+    your configuration you will need to update the datasources and the deployment URLs
+    in the Reports project of the solution. Change the datasources SQL server by editing
+    it directly in the datasource, edit the properties of the Reports project to set
+    the URLS. You should also update the SSRSWebService Web Reference by right
+    clicking and selecting Update Web Reference. Set the Web Reference URL in its properties
+    first if SQL Reporting Services 2012 is running on a server other than localhost.<br />
+    <br />
+    You will need to deploy the Shared Data Source from the Chapter 6 sample code prior to uploading the sample report included in Chapter 6. The report uses this shared data source and will tell you that it could not publish the report with the developed application because if it can't find the shared data source on the SSRS 2012 server. Also note that the shared datasource in this chapter is in the local Chapter 6 folder vs the Pro_SSRS folder we have been using. We did this because when uploading the report using the SSRS Publisher it will make the connection to the shared datasource Pro_SSRS only if it resides in the same folder as you deploy the report to.<br />
+    <br />
+    For the rs.exe utility example, place all needed files in the C:\Pro_SSRS\CH7\RS folder on the machine you are deploying from or point the PublishReports.rss file to the location you wish to use.
+    <br />
+
+</body>
+</html>

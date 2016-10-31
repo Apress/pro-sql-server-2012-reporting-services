@@ -1,0 +1,259 @@
+﻿<DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Pro SSRS</ID>
+  <Name>Pro SSRS</Name>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+  <Annotations xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout>
+              <dds>
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12061" scrolltop="-7911" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="20876" y="15187" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                  <font>
+                    <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  </font>
+                  <mouseicon>
+                    <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                  </mouseicon>
+                </diagram>
+                <layoutmanager>
+                  <ddsxmlobj />
+                </layoutmanager>
+                <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.1" tooltip="Patient Census" left="-7143" top="-7753" logicalid="3" controlid="1" masterid="0" hint1="0" hint2="0" width="4737" height="14470" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="000800008112000086380000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj>
+                      <property name="LogicalObject" value="Patient Census" vartype="8" />
+                    </ddsxmlobj>
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+                <ddscontrol controlprogid="MSDDS.Text" left="7357" top="4110" logicalid="4" controlid="2" masterid="0" hint1="0" hint2="0" width="6000" height="1500" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                  <control>
+                    <ddsxmlobjectstreaminitwrapper binary="0002000070170000dc0500000300640000000500008008000080000000003a000100000090013c670200065461686f6d6104000d000a000d000a0000000000" />
+                  </control>
+                  <layoutobject>
+                    <ddsxmlobj />
+                  </layoutobject>
+                  <shape groupshapeid="0" groupnode="0" />
+                </ddscontrol>
+              </dds>
+            </DiagramLayout>
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>-12061</DiagramViewPortLeft>
+            <DiagramViewPortTop>-7911</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Pro SSRS</DataSourceID>
+  <Schema>
+    <xs:schema id="Pro_x0020_SSRS" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Pro_x0020_SSRS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="80deac2c-6a20-4ceb-882b-2519d1e90412" msprop:CompareInfo="&lt;CompareInfo&gt;&lt;Culture&gt;en-US&lt;/Culture&gt;&lt;IgnoreCase&gt;true&lt;/IgnoreCase&gt;&lt;IgnoreKanaType&gt;true&lt;/IgnoreKanaType&gt;&lt;IgnoreWidth&gt;true&lt;/IgnoreWidth&gt;&lt;/CompareInfo&gt;">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="Patient_x0020_Census" msprop:QueryDefinition="SELECT     Admissions.PatProgramID, Employee.EmployeeID, Employee.LastName AS Emp_LastName, Employee.FirstName AS Emp_Firstname, &#xD;&#xA;                      Discipline.Dscr AS Discipline, Branch.BranchName, Patient.PatID, Patient.LastName AS Pat_LastName, Patient.FirstName AS Pat_FirstName, &#xD;&#xA;                      Diag.DiagID, Diag.Dscr AS Diagnosis, PatDiag.DiagOnset, PatDiag.DiagOrder, Admissions.StartOfCare, Admissions.DischargeDate, Patient.MI, &#xD;&#xA;                      Patient.Address1, Patient.Address2, Patient.City, Patient.HomePhone, Patient.Zip, Patient.State, Patient.WorkPhone, Patient.DOB, Patient.SSN, &#xD;&#xA;                      Patient.Sex, Patient.RaceID, Patient.MaritalStatusID, PatEMRDoc.DateEntered, PatEMRDoc.Dscr AS EMR_Document, &#xD;&#xA;                      Dischg.Dscr AS [Discharge Reason], DATEDIFF(dd, Admissions.StartOfCare, Admissions.DischargeDate) + 1 AS [Length of Stay]&#xD;&#xA;FROM         Admissions INNER JOIN&#xD;&#xA;                      Patient ON Admissions.PatID = Patient.PatID INNER JOIN&#xD;&#xA;                      Branch ON Branch.BranchID = Patient.OrigBranchID LEFT OUTER JOIN&#xD;&#xA;                      PatDiag ON Admissions.PatProgramID = PatDiag.PatProgramID INNER JOIN&#xD;&#xA;                      Diag ON PatDiag.DiagTblID = Diag.DiagTblID LEFT OUTER JOIN&#xD;&#xA;                      Employee ON Admissions.EmployeeTblID = Employee.EmployeeTblID LEFT OUTER JOIN&#xD;&#xA;                      Discipline ON Discipline.DisciplineTblID = Employee.DisciplineTblID LEFT OUTER JOIN&#xD;&#xA;                      PatEMRDoc ON Admissions.PatProgramID = PatEMRDoc.PatProgramID LEFT OUTER JOIN&#xD;&#xA;                      DocumentImage ON DocumentImage.DocumentImageID = PatEMRDoc.DocumentImageID LEFT OUTER JOIN&#xD;&#xA;                      Dischg ON Admissions.DischargeTblID = Dischg.DischgTblID&#xD;&#xA;WHERE     (PatDiag.DiagOrder = 1) AND (PatDiag.DiagEnd IS NULL)" msprop:DbTableName="Patient Census" msprop:QueryBuilder="SpecificQueryBuilder" msprop:IsLogical="True" msprop:FriendlyName="Patient Census" msprop:design-time-name="94d05135-e782-454d-8d06-0ddca75077b1" msprop:TableType="View" msprop:stats_RowCount="722">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="EmployeeID" msprop:stats_StDevWidth="0.4784419" msprop:stats_UniqueValuePercent="1" msprop:FriendlyName="EmployeeID" msprop:design-time-name="fb44a24b-2f41-4f13-8fdb-dc260c099d5d" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="9" msprop:stats_AvgWidth="4.646325" msprop:DbColumnName="EmployeeID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BranchName" msprop:stats_StDevWidth="1.848908" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="BranchName" msprop:design-time-name="fefea6ba-dd90-4684-96c8-c1b49c7b12c1" msprop:stats_MaxWidth="14" msprop:stats_UniqueValueCount="3" msprop:stats_AvgWidth="11.60388" msprop:DbColumnName="BranchName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PatID" msprop:stats_StDevWidth="0.4069184" msprop:stats_UniqueValuePercent="87" msprop:FriendlyName="PatID" msprop:design-time-name="c28d4955-caf6-4a83-bd65-d23308b33541" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="632" msprop:stats_AvgWidth="2.831025" msprop:DbColumnName="PatID" type="xs:int" minOccurs="0" />
+                  <xs:element name="DiagID" msprop:stats_StDevWidth="0.8283097" msprop:stats_UniqueValuePercent="21" msprop:FriendlyName="DiagID" msprop:design-time-name="4aac4371-0537-44a5-9a78-df4edd7ff221" msprop:stats_MaxWidth="6" msprop:stats_UniqueValueCount="158" msprop:stats_AvgWidth="5.085873" msprop:DbColumnName="DiagID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DiagOnset" msprop:FriendlyName="DiagOnset" msprop:DbColumnName="DiagOnset" msprop:stats_UniqueValuePercent="41" msprop:design-time-name="c50f6154-918c-47eb-a319-2ccfc70a0b43" msprop:stats_UniqueValueCount="300" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DiagOrder" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="DiagOrder" msprop:design-time-name="d9e4ca97-9d29-409c-b08a-253a8cc9ea89" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="1" msprop:DbColumnName="DiagOrder" type="xs:short" minOccurs="0" />
+                  <xs:element name="StartOfCare" msprop:FriendlyName="StartOfCare" msprop:DbColumnName="StartOfCare" msprop:stats_UniqueValuePercent="56" msprop:design-time-name="b73a2237-2276-4fd9-87b5-41134f602008" msprop:stats_UniqueValueCount="405" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="DischargeDate" msprop:FriendlyName="DischargeDate" msprop:DbColumnName="DischargeDate" msprop:stats_UniqueValuePercent="36" msprop:design-time-name="95371e94-3d1b-4060-80ba-376d6f97e78c" msprop:stats_UniqueValueCount="120" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MI" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="12" msprop:FriendlyName="MI" msprop:design-time-name="2877c75a-657f-489e-9d86-db3df2c47f95" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="21" msprop:stats_AvgWidth="1" msprop:DbColumnName="MI" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Address1" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="Address1" msprop:design-time-name="fddeb832-f5ba-40f7-9917-096fc384ef20" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="2" msprop:DbColumnName="Address1" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Address2" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="Address2" msprop:design-time-name="fa39eaa2-a5bd-4c7b-8c2b-acf730599d00" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="2" msprop:DbColumnName="Address2" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="City" msprop:design-time-name="e90f9dd5-7242-4a65-b536-7d1a470bbeac" msprop:stats_MaxWidth="9" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="9" msprop:DbColumnName="City" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HomePhone" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="HomePhone" msprop:design-time-name="301ebf58-7295-40b8-9674-351ea813dfaf" msprop:stats_MaxWidth="10" msprop:stats_UniqueValueCount="2" msprop:stats_AvgWidth="10" msprop:DbColumnName="HomePhone" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Zip" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="Zip" msprop:design-time-name="e0804f5b-68b6-49a9-abb1-797bafcc1a66" msprop:stats_MaxWidth="5" msprop:stats_UniqueValueCount="2" msprop:stats_AvgWidth="5" msprop:DbColumnName="Zip" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="13" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="State" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="State" msprop:design-time-name="63cbb605-29a4-4a5b-92ed-342f3c006480" msprop:stats_MaxWidth="2" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="2" msprop:DbColumnName="State" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="WorkPhone" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="100" msprop:FriendlyName="WorkPhone" msprop:design-time-name="32900541-7de4-4fc1-8c92-5a8c11afc2ba" msprop:stats_MaxWidth="10" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="10" msprop:DbColumnName="WorkPhone" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DOB" msprop:FriendlyName="DOB" msprop:DbColumnName="DOB" msprop:stats_UniqueValuePercent="85" msprop:design-time-name="01ef7b6f-73d6-4e89-8f73-c19be4311a20" msprop:stats_UniqueValueCount="618" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="SSN" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="SSN" msprop:design-time-name="e8283f57-b32d-4389-9d10-dd4a797baf1e" msprop:stats_MaxWidth="9" msprop:stats_UniqueValueCount="2" msprop:stats_AvgWidth="9" msprop:DbColumnName="SSN" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Sex" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="Sex" msprop:design-time-name="8e9f9c07-6b03-4117-8a00-5db09018059a" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="2" msprop:stats_AvgWidth="1" msprop:DbColumnName="Sex" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RaceID" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="RaceID" msprop:design-time-name="f03f53da-cac5-4b5a-891f-9fbd0141ecf9" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="5" msprop:stats_AvgWidth="1" msprop:DbColumnName="RaceID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MaritalStatusID" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="0" msprop:FriendlyName="MaritalStatusID" msprop:design-time-name="84994bef-77cb-43d1-ae66-74ca7bd5fba1" msprop:stats_MaxWidth="1" msprop:stats_UniqueValueCount="6" msprop:stats_AvgWidth="1" msprop:DbColumnName="MaritalStatusID" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DateEntered" msprop:FriendlyName="DateEntered" msprop:DbColumnName="DateEntered" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="45091eb4-8a1a-4c1a-b4cb-4fa99e483c28" msprop:stats_UniqueValueCount="3" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Discipline" msprop:stats_StDevWidth="3.96934" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="2d389969-d3a3-4adc-b983-4f1c6e465ca2" msprop:stats_MaxWidth="24" msprop:stats_UniqueValueCount="6" msprop:stats_AvgWidth="18.724" msprop:DbColumnName="Discipline" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Pat_LastName" msprop:stats_StDevWidth="0.2005492" msprop:stats_UniqueValuePercent="87" msprop:design-time-name="9d9969ff-00a0-44b1-94bc-8544bccf29af" msprop:stats_MaxWidth="11" msprop:stats_UniqueValueCount="632" msprop:stats_AvgWidth="6.998615" msprop:DbColumnName="Pat_LastName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Pat_FirstName" msprop:stats_StDevWidth="0.1177367" msprop:stats_UniqueValuePercent="87" msprop:design-time-name="79edf053-8d44-40d8-8882-3f5284b5d936" msprop:stats_MaxWidth="6" msprop:stats_UniqueValueCount="632" msprop:stats_AvgWidth="4.00277" msprop:DbColumnName="Pat_FirstName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Diagnosis" msprop:stats_StDevWidth="4.675904" msprop:stats_UniqueValuePercent="21" msprop:design-time-name="9097b919-b407-4b24-b7eb-23b7a492c2d7" msprop:stats_MaxWidth="44" msprop:stats_UniqueValueCount="157" msprop:stats_AvgWidth="19.89474" msprop:DbColumnName="Diagnosis" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EMR_Document" msprop:stats_StDevWidth="0" msprop:stats_UniqueValuePercent="33" msprop:design-time-name="adbe013b-68a5-4865-8717-db1e37d3b800" msprop:stats_MaxWidth="6" msprop:stats_UniqueValueCount="1" msprop:stats_AvgWidth="6" msprop:DbColumnName="EMR_Document" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PatProgramID" msprop:stats_StDevWidth="0.3829405" msprop:stats_UniqueValuePercent="100" msprop:design-time-name="eab76420-34c2-48d9-b4e0-a033a6191b63" msprop:stats_MaxWidth="3" msprop:stats_UniqueValueCount="722" msprop:stats_AvgWidth="2.854571" msprop:DbColumnName="PatProgramID" type="xs:int" />
+                  <xs:element name="Emp_LastName" msprop:stats_StDevWidth="0.7916773" msprop:stats_UniqueValuePercent="0" msprop:design-time-name="5e49db2b-80bf-438a-8192-c2524cfa840b" msprop:stats_MaxWidth="7" msprop:stats_UniqueValueCount="6" msprop:stats_AvgWidth="6.61165" msprop:DbColumnName="Emp_LastName" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Emp_Firstname" msprop:stats_StDevWidth="1.537072" msprop:stats_UniqueValuePercent="1" msprop:design-time-name="2a01fc06-302b-4490-88f4-e5ef2efe88b3" msprop:stats_MaxWidth="10" msprop:stats_UniqueValueCount="9" msprop:stats_AvgWidth="6.0638" msprop:DbColumnName="Emp_Firstname" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Discharge_x0020_Reason" msprop:stats_StDevWidth="3.645663" msprop:stats_UniqueValuePercent="2" msprop:design-time-name="69596131-c6c4-413e-8f16-1e7c7f84ba1a" msprop:stats_MaxWidth="28" msprop:stats_UniqueValueCount="8" msprop:stats_AvgWidth="20.79167" msprop:DbColumnName="Discharge Reason" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Length_x0020_of_x0020_Stay" msprop:stats_StDevWidth="0.6921636" msprop:stats_UniqueValuePercent="53" msprop:design-time-name="2fb8f245-0e69-429c-87dc-34fd3f3c78e1" msprop:stats_MaxWidth="4" msprop:stats_UniqueValueCount="174" msprop:stats_AvgWidth="2.311927" msprop:DbColumnName="Length of Stay" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//Patient_x0020_Census" />
+          <xs:field xpath="PatProgramID" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+  </Schema>
+</DataSourceView>

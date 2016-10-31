@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{27F24A6B-D5E4-4113-A2E7-58E1D54948F6}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "Pro_SSRS", "Pro_SSRS.rptproj", "{F57B7D98-B165-472F-89B0-F19ED055A472}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Patient Referral", "Patient_Referral Solution\Patient Referral.dwproj", "{226ED572-8962-48FD-8A2D-1E2652839C99}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "RSExecutionLog_Load", "Integration Services Project2\RSExecutionLog_Load.dtproj", "{209570B7-EA8F-438F-AA4C-9C37FB524A9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Development|Default = Development|Default
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Debug|Default.ActiveCfg = Debug
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Debug|Default.Build.0 = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Debug|Default.Deploy.0 = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.DebugLocal|Default.Build.0 = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.DebugLocal|Default.Deploy.0 = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Development|Default.ActiveCfg = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Development|Default.Build.0 = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Development|Default.Deploy.0 = DebugLocal
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Production|Default.ActiveCfg = Production
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Production|Default.Build.0 = Production
+		{F57B7D98-B165-472F-89B0-F19ED055A472}.Production|Default.Deploy.0 = Production
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Debug|Default.ActiveCfg = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Debug|Default.Build.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Debug|Default.Deploy.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.DebugLocal|Default.ActiveCfg = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.DebugLocal|Default.Build.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.DebugLocal|Default.Deploy.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Development|Default.ActiveCfg = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Development|Default.Build.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Development|Default.Deploy.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Production|Default.ActiveCfg = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Production|Default.Build.0 = Development
+		{226ED572-8962-48FD-8A2D-1E2652839C99}.Production|Default.Deploy.0 = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.Debug|Default.ActiveCfg = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.Debug|Default.Build.0 = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.DebugLocal|Default.ActiveCfg = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.DebugLocal|Default.Build.0 = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.Development|Default.ActiveCfg = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.Development|Default.Build.0 = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.Production|Default.ActiveCfg = Development
+		{209570B7-EA8F-438F-AA4C-9C37FB524A9A}.Production|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

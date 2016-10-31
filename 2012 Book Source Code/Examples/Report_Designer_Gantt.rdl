@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2007/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=uafcqasrv104;Initial Catalog=DBA_REP</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:DataSourceID>97b66a59-12d3-40c7-9f92-2630f7dc9ed3</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="Server">
+          <DataField>Server</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="name">
+          <DataField>name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Job_Freq_Info">
+          <DataField>Job Freq Info</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Freq_Interval_Dscr">
+          <DataField>Freq_Interval_Dscr</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Job_Enabled">
+          <DataField>Job_Enabled</DataField>
+          <rd:TypeName>System.Byte</rd:TypeName>
+        </Field>
+        <Field Name="Start_Time">
+          <DataField>Start_Time</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="End_Time">
+          <DataField>End_Time</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="active_start_time">
+          <DataField>active_start_time</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Duration">
+          <DataField>Duration</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="last_run_duration">
+          <DataField>last_run_duration</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="notify_email_operator_id">
+          <DataField>notify_email_operator_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Category_Name">
+          <DataField>Category_Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="date_modified">
+          <DataField>date_modified</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="enabled">
+          <DataField>enabled</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <CommandText>select  jobs.Server,
+--        jobs.job_id,
+        jobs.name,
+        DBO.ConvertJobFreq(ISNULL(freq_type, 0),
+                                   ISNULL(freq_interval, 0)) AS [Job Freq Info],
+                CASE WHEN [freq_subday_type] = 0 THEN 'Job Not Scheduled'
+                     WHEN [freq_subday_type] = 1
+                     THEN 'Job Runs at  '
+                          + CASE WHEN LEN(Active_Start_Time) = 5
+                                 THEN CAST('0'
+                                      + Left(Active_Start_Time, 1)+ ':' + Substring(Cast(Active_start_time as varchar(6)),1,2) + ':' + Substring(Cast(Active_start_time as varchar(6)),3,2) as varchar(8))
+                                 ELSE Cast(Left(Active_Start_Time, 2)+ ':' + Substring(Cast(Active_start_time as varchar(6)),2,2) + ':' + Substring(Cast(Active_start_time as varchar(6)),4,2) as varchar(8))
+--                                 ELSE CAST(Active_Start_Time AS CHAR(6))
+                            END
+                     WHEN [freq_subday_type] = 2
+                     THEN 'Job Run Every '
+                          + CAST(Freq_subday_interval AS VARCHAR(6))
+                          + ' Seconds'
+                     WHEN [freq_subday_type] = 4
+                     THEN 'Job Runs Every '
+                          + CAST(Freq_subday_interval AS VARCHAR(6))
+                          + ' Minutes'
+                     WHEN [freq_subday_type] = 8
+                     THEN 'Job Runs Every '
+                          + CAST(Freq_subday_interval AS VARCHAR(6))
+                          + ' Hours'
+                     ELSE 'Unknown'
+                END AS Freq_Interval_Dscr,
+        jobs.Job_Enabled,
+Cast(CASE WHEN LEN(Active_Start_Time) = 5
+                                 THEN CAST('0'
+                                      + Left(Active_Start_Time, 1)+ ':' + Substring(Cast(Active_start_time as varchar(6)),2,2) + ':' + Substring(Cast(Active_start_time as varchar(6)),4,2) as varchar(8))
+                                 WHEN  LEN(Active_Start_Time) = 6 THEN
+									 Cast(Left(Active_Start_Time, 2)+ ':' + Substring(Cast(Active_start_time as varchar(6)),3,2) + ':' + Substring(Cast(Active_start_time as varchar(6)),5,2) as varchar(8))
+                                 WHEN Active_Start_Time = 0 THEN '00:00:00'
+
+                            END as datetime) as Start_Time,
+
+Cast(CASE WHEN LEN(Active_Start_Time) = 5
+                                 THEN CAST('0'
+                                      + Left(Active_Start_Time, 1)+ ':' + Substring(Cast(Active_start_time as varchar(6)),2,2) + ':' + Substring(Cast(Active_start_time as varchar(6)),4,2) as varchar(8))
+                                 WHEN  LEN(Active_Start_Time) = 6 THEN
+									 Cast(Left(Active_Start_Time, 2)+ ':' + Substring(Cast(Active_start_time as varchar(6)),3,2) + ':' + Substring(Cast(Active_start_time as varchar(6)),5,2) as varchar(8))
+                                 WHEN Active_Start_Time = 0 THEN '00:00:00'
+
+                            END as datetime) 
++
+
+Cast(CASE WHEN ( last_run_duration = 0
+                            or last_run_duration is NULL
+                          ) THEN NULL
+                     ELSE SUBSTRING(RIGHT('000000'
+                                          + CAST(last_run_duration AS VARCHAR(06)),
+                                          6), 1, 2) + ':'
+                          + SUBSTRING(RIGHT('000000'
+                                            + CAST(last_run_duration AS VARCHAR(06)),
+                                            6), 3, 2) + ':'
+                          + SUBSTRING(RIGHT('000000'
+                                            + CAST(last_run_duration AS VARCHAR(06)),
+                                            6), 5, 2)
+                END as datetime) as End_Time,
+active_start_time,
+Cast(CASE WHEN ( last_run_duration = 0
+                            or last_run_duration is NULL
+                          ) THEN NULL
+                     ELSE SUBSTRING(RIGHT('000000'
+                                          + CAST(last_run_duration AS VARCHAR(06)),
+                                          6), 1, 2) + ':'
+                          + SUBSTRING(RIGHT('000000'
+                                            + CAST(last_run_duration AS VARCHAR(06)),
+                                            6), 3, 2) + ':'
+                          + SUBSTRING(RIGHT('000000'
+                                            + CAST(last_run_duration AS VARCHAR(06)),
+                                            6), 5, 2)
+                END as datetime) as Duration,
+cast(last_run_duration as int) as last_run_duration,
+--        jobs.description,
+--        jobs.notify_level_eventlog,
+--        jobs.notify_level_email,
+--        jobs.notify_level_netsend,
+--        jobs.notify_level_page,
+        jobs.notify_email_operator_id,
+--        jobs.date_created,
+        jobs.Category_Name,
+--        jobs.next_run_date,
+--        jobs.next_run_time,
+--        jobs.last_run_outcome,
+--        jobs.last_outcome_message,
+--        jobs.last_run_date,
+--        jobs.last_run_time,
+--        jobs.Notify_Operator,
+--        jobs.email_address,
+--        jobs.Job_Version,
+        jobs.date_modified,
+--        jobs.Package_run_date,
+--        jobs.Schedule_Name,
+        jobs.enabled
+
+
+from    jobs
+where   server in ( 'hhsrpt1', 'hhshourpt2', 'hhshoudb', 'devdb1' )
+        and ( name like '%backup%'
+              or name like '%restore%'
+            ) and Job_enabled = 1 and enabled = 1
+order by server,
+        duration desc</CommandText>
+        <rd:AutoGenerated>false</rd:AutoGenerated>
+        <rd:Hidden>false</rd:Hidden>
+        <rd:SuppressAutoUpdate>false</rd:SuppressAutoUpdate>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!Server.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <Label>=Fields!Server.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label />
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="EmptySeriesName">
+              <ChartDataPoints>
+                <ChartDataPoint />
+              </ChartDataPoints>
+              <Style />
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <Format>h:mm tt</Format>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                  </Style>
+                </ChartAxisTitle>
+                <IntervalType>Hours</IntervalType>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <Reverse>true</Reverse>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                <MinFontSize>10pt</MinFontSize>
+                <MaxFontSize>13pt</MaxFontSize>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <MinFontSize>6pt</MinFontSize>
+                <MaxFontSize>10pt</MaxFontSize>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                  </Style>
+                </ChartAxisTitle>
+                <VariableAutoInterval>true</VariableAutoInterval>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <MinFontSize>6pt</MinFontSize>
+                <MaxFontSize>10pt</MaxFontSize>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontSize>8pt</FontSize>
+                    <FontWeight>Normal</FontWeight>
+                    <TextDecoration>None</TextDecoration>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <MinFontSize>6pt</MinFontSize>
+                <MaxFontSize>10pt</MaxFontSize>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartLegends>
+          <ChartLegend Name="Default">
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontStyle>Normal</FontStyle>
+              <FontSize>8pt</FontSize>
+              <FontWeight>Normal</FontWeight>
+              <TextDecoration>None</TextDecoration>
+              <ShadowColor>#33cccc</ShadowColor>
+            </Style>
+            <ChartLegendTitle>
+              <Caption />
+              <Style>
+                <FontStyle>Normal</FontStyle>
+                <FontSize>8pt</FontSize>
+                <FontWeight>Bold</FontWeight>
+                <TextDecoration>None</TextDecoration>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </ChartLegendTitle>
+            <MinFontSize>7pt</MinFontSize>
+            <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+            <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+          </ChartLegend>
+        </ChartLegends>
+        <ChartTitles>
+          <ChartTitle Name="Default">
+            <Caption>Chart Title</Caption>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontStyle>Normal</FontStyle>
+              <FontWeight>Bold</FontWeight>
+              <TextDecoration>None</TextDecoration>
+              <TextAlign>General</TextAlign>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </ChartTitle>
+        </ChartTitles>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <FontStyle>Normal</FontStyle>
+            <FontWeight>Normal</FontWeight>
+            <TextDecoration>None</TextDecoration>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>DataSet1</DataSetName>
+        <Height>7.59375in</Height>
+        <Width>10.40625in</Width>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>7.59375in</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+    </Style>
+  </Body>
+  <Width>10.40625in</Width>
+  <Page>
+    <PageHeader>
+      <Height>0.25in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>0.25in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <rd:ReportID>b4ff88ec-a326-4fd7-8aff-85803322a143</rd:ReportID>
+</Report>

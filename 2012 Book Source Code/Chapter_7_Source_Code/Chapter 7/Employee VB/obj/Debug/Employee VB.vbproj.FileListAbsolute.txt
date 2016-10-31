@@ -1,0 +1,11 @@
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\bin\Debug\Employee VB.dll.config
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\bin\Debug\Employee VB.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\bin\Debug\Employee VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\bin\Debug\Employee VB.xml
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\Employee_VB.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\Employee VB.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\Employee VB.xml
+C:\PRO_SSRS_Final\Chapter 7\Employee VB\obj\Debug\Employee VB.pdb

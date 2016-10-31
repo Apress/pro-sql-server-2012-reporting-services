@@ -1,0 +1,11 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SRS_Viewer_Control.EmployeePay.rdlc
+obj\Debug\SRS_Viewer_Control.ViewerRVC.resources
+obj\Debug\SRS_Viewer_Control.Properties.Resources.resources
+obj\Debug\SRS Viewer RVC.csproj.GenerateResource.Cache
+obj\Debug\SRS Viewer Control.exe
+bin\Debug\SRS Viewer Control.exe
+bin\Debug\SRS Viewer Control.pdb
+obj\Debug\SRS Viewer Control.pdb
+bin\Debug\SRS Viewer Control.exe.config
+obj\Debug\SRS_Viewer_Control.GetParameters.resources

@@ -1,0 +1,186 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="318b0dba-6f3c-4d5f-a85e-0124c265d0c9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Admit Time</ID>
+  <Name>Date of Admission</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00.0000000-06:00</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00.0000000-06:00</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00.0000000-06:00</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c26f48ce-4464-4c53-b699-ac178e14bfbf">
+    <DataSourceViewID>HW Analysis</DataSourceViewID>
+  </Source>
+  <Type>Time</Type>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="14cf4e78-95f7-4f8a-ae86-412f23fd605a">
+      <ID>Year</ID>
+      <Name>Year</Name>
+      <Type>Years</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6fede23d-7235-47aa-9d42-57816e7ace11">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="38fa8d86-c390-43d6-a70a-895c09d9085b">
+            <TableID>dbo_DimAdmitTime</TableID>
+            <ColumnID>Year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c8f213ec-1fda-42ee-aa9a-c415ad3b614e">
+        <DataType>WChar</DataType>
+        <DataSize>-1</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1a91ec6e-94de-4f17-b6e5-065e2bf79396">
+          <TableID>dbo_DimAdmitTime</TableID>
+          <ColumnID>Year</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="40163d89-ae52-4aca-b9c4-e5ffb0ad30ef">
+      <ID>Month</ID>
+      <Name>MonthName</Name>
+      <Type>Months</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="37f8a1aa-1669-4bf1-86ee-bb86c6171f0f">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49de5abb-fb77-443c-9ca9-e093fcc828ed">
+            <TableID>dbo_DimAdmitTime</TableID>
+            <ColumnID>MonthName</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ba6b84c4-eb43-4cbc-8916-05ab4594bf7e">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4c1f1bf1-fd30-4fb4-8c5d-10cb75e3fc41">
+          <TableID>dbo_DimAdmitTime</TableID>
+          <ColumnID>MonthName</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ab133b20-79eb-4c35-a3c3-fed2717bb307">
+          <AttributeID>Year</AttributeID>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="43a9a545-0034-4e87-b4c5-4dde70dfcac3">
+      <ID>Date</ID>
+      <Name>admitdate</Name>
+      <Type>Days</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f283801-f35b-495c-8702-f2b6018cba53">
+          <DataType>Date</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dffcfdb9-6449-4847-96f9-e5f7d802d7e4">
+            <TableID>dbo_DimAdmitTime</TableID>
+            <ColumnID>admitdate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="098b76e0-c75d-4835-b90f-0c0555c731bf">
+        <DataType>WChar</DataType>
+        <DataSize>-1</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0a63ab8b-1762-4051-b3c4-291de39f023a">
+          <TableID>dbo_DimAdmitTime</TableID>
+          <ColumnID>admitdate</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c1f20c86-875b-4985-bb23-04cf6478ee13">
+          <AttributeID>Month</AttributeID>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="dbcb6f5a-21de-4fea-b2af-86a9d7421cf6">
+      <ID>patreferraltblid</ID>
+      <Name>patreferraltblid</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f68e58f6-b1a7-4400-9592-3934a08425bc">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0a383453-a094-45e1-9e9c-670449a08724">
+            <TableID>dbo_DimAdmitTime</TableID>
+            <ColumnID>patreferraltblid</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="590e6656-fe75-4b7b-9a83-82a0b040857a">
+        <DataType>WChar</DataType>
+        <DataSize>-1</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5f00bf4e-4433-4cb1-b04e-680e18fa4808">
+          <TableID>dbo_DimAdmitTime</TableID>
+          <ColumnID>patreferraltblid</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="16980de0-fe31-4f81-8012-3fde37cfc512">
+          <AttributeID>Date</AttributeID>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="e5a86be3-159c-428a-82ce-953f8cc4d16e">
+      <ID>Year -  MonthName -  admitdate</ID>
+      <Name>Year -  MonthName -  admitdate</Name>
+      <Levels>
+        <Level dwd:design-time-name="b7d0c3d2-9357-491c-acc7-3b41be8131c8">
+          <ID>Year</ID>
+          <Name>Year</Name>
+          <SourceAttributeID>Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f66e87a9-f0e4-48f5-8020-2f5808bb1ea3">
+          <ID>MonthName</ID>
+          <Name>MonthName</Name>
+          <SourceAttributeID>Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="dcd4ef9e-510f-453b-a1bf-9781d79e4ef8">
+          <ID>admitdate</ID>
+          <Name>admitdate</Name>
+          <SourceAttributeID>Date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+</Dimension>

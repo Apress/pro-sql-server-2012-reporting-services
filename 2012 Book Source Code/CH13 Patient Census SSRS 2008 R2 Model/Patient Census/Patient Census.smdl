@@ -1,0 +1,1198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SemanticModel ID="Gfe5e6cf7-65bf-4955-b289-54d40aee2a22" xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Culture>en-US</Culture>
+  <Entities>
+    <Entity ID="G6f5421e8-c588-4328-88a2-274e87b4221e">
+      <Name>Patient Census</Name>
+      <CollectionName>Patient Censuses</CollectionName>
+      <IdentifyingAttributes>
+        <AttributeReference>
+          <!--Pat Program ID-->
+          <AttributeID>G4792548e-e8f3-4339-b8f4-08f2da63aa2a</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Pat Last Name-->
+          <AttributeID>Gd0704e6f-db4e-4747-8f44-28f2bc5bc061</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--DOB-->
+          <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Date Entered-->
+          <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+        </AttributeReference>
+      </IdentifyingAttributes>
+      <DefaultDetailAttributes>
+        <AttributeReference>
+          <!--Pat Program ID-->
+          <AttributeID>G4792548e-e8f3-4339-b8f4-08f2da63aa2a</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Pat Last Name-->
+          <AttributeID>Gd0704e6f-db4e-4747-8f44-28f2bc5bc061</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--DOB-->
+          <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Date Entered-->
+          <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Pat First Name-->
+          <AttributeID>Gf697d34a-c2e5-4edd-bf83-c4fe027ae836</AttributeID>
+        </AttributeReference>
+        <AttributeReference>
+          <!--Pat ID-->
+          <AttributeID>G9e406764-ea1a-4b38-90ec-03a71c12d2dd</AttributeID>
+        </AttributeReference>
+      </DefaultDetailAttributes>
+      <DefaultAggregateAttributes>
+        <AttributeReference>
+          <!--#Patient Censuses-->
+          <AttributeID>G1292c446-4df0-4f07-a323-0bd317649709</AttributeID>
+        </AttributeReference>
+      </DefaultAggregateAttributes>
+      <InstanceSelection>FilteredList</InstanceSelection>
+      <Fields>
+        <Attribute ID="G1292c446-4df0-4f07-a323-0bd317649709">
+          <Name>#Patient Censuses</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>Count</FunctionName>
+              <Arguments>
+                <Expression>
+                  <EntityRef>
+                    <!--Patient Census-->
+                    <EntityID>G6f5421e8-c588-4328-88a2-274e87b4221e</EntityID>
+                  </EntityRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+          <IsAggregate>true</IsAggregate>
+          <SortDirection>Descending</SortDirection>
+          <Format>n0</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+        </Attribute>
+        <Attribute ID="G4792548e-e8f3-4339-b8f4-08f2da63aa2a">
+          <Name>Pat Program ID</Name>
+          <DataType>Integer</DataType>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <DiscourageGrouping>true</DiscourageGrouping>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="PatProgramID" />
+        </Attribute>
+        <Attribute ID="G677c2db3-30d3-4bcb-a370-85bbedaba891">
+          <Name>Employee ID</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EmployeeID" />
+        </Attribute>
+        <Attribute ID="G7667b104-96c3-43a5-9e97-6897ae180383">
+          <Name>Emp Last Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>8</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Emp_LastName" />
+        </Attribute>
+        <Attribute ID="G23fedbb0-4976-4f7f-b943-65338c744ea8">
+          <Name>Emp Firstname</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>9</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Emp_Firstname" />
+        </Attribute>
+        <Attribute ID="Ga5a30336-6a42-4a28-b365-63927ab06367">
+          <Name>Discipline</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>24</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Discipline" />
+        </Attribute>
+        <Attribute ID="G9f4dfc1b-0d32-48bd-9cbe-a59cdd307b86">
+          <Name>Branch Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>15</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="BranchName" />
+        </Attribute>
+        <Attribute ID="G9e406764-ea1a-4b38-90ec-03a71c12d2dd">
+          <Name>Pat ID</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>4</Width>
+          <Format>g</Format>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="PatID" />
+        </Attribute>
+        <Attribute ID="Gd0704e6f-db4e-4747-8f44-28f2bc5bc061">
+          <Name>Pat Last Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="Pat_LastName" />
+        </Attribute>
+        <Attribute ID="Gf697d34a-c2e5-4edd-bf83-c4fe027ae836">
+          <Name>Pat First Name</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>9</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="Pat_FirstName" />
+        </Attribute>
+        <Attribute ID="Gdcbb7c05-ac2a-4cf0-a55f-6d3fc27cb5b4">
+          <Name>Diag ID</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>6</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="DiagID" />
+        </Attribute>
+        <Attribute ID="G2f5b7ebd-454f-465b-aed9-e7e2d99d602d">
+          <Name>Diagnosis</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>30</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Diagnosis" />
+        </Attribute>
+        <Attribute ID="G0c9957bf-c885-4669-a5d1-de022a59676e">
+          <Name>Diag Onset</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="G49b6ba3f-cb58-47d9-88c2-29b890283b8f">
+              <Name>Diag Onset Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Onset-->
+                        <AttributeID>G0c9957bf-c885-4669-a5d1-de022a59676e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G940de886-0e2a-4e90-9fcd-34dbcea17f3d">
+              <Name>Diag Onset Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Onset-->
+                        <AttributeID>G0c9957bf-c885-4669-a5d1-de022a59676e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G5eb181ed-63fd-4680-9486-21a3e10efdb5">
+              <Name>Diag Onset Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Onset-->
+                        <AttributeID>G0c9957bf-c885-4669-a5d1-de022a59676e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="G97d8241f-3c2e-414f-9b49-133173ac686d">
+              <Name>Diag Onset Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Onset-->
+                        <AttributeID>G0c9957bf-c885-4669-a5d1-de022a59676e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G77a2f86d-e7a3-4a47-8f3b-b6a204aab1b0">
+              <Name>First Diag Onset</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Onset-->
+                        <AttributeID>G0c9957bf-c885-4669-a5d1-de022a59676e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G6aeef39a-80dc-4e0f-b496-586ff57f3246">
+              <Name>Last Diag Onset</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Onset-->
+                        <AttributeID>G0c9957bf-c885-4669-a5d1-de022a59676e</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DiagOnset" />
+        </Attribute>
+        <Attribute ID="G93f0a3bb-1fdf-4b2f-a0b9-496b6ded7479">
+          <Name>Diag Order</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>2</Width>
+          <Format>g</Format>
+          <!--Total Diag Order-->
+          <DefaultAggregateAttributeID>Ge37a001a-6b17-4ef1-872c-7b6170302347</DefaultAggregateAttributeID>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="Ge37a001a-6b17-4ef1-872c-7b6170302347">
+              <Name>Total Diag Order</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Sum</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Order-->
+                        <AttributeID>G93f0a3bb-1fdf-4b2f-a0b9-496b6ded7479</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G224e0057-6306-49aa-a322-20dc8623e8f3">
+              <Name>Avg Diag Order</Name>
+              <DataType>Decimal</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Avg</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Order-->
+                        <AttributeID>G93f0a3bb-1fdf-4b2f-a0b9-496b6ded7479</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G8ebfbcd1-37af-4b0f-bb4d-b62de821aa64">
+              <Name>Min Diag Order</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Order-->
+                        <AttributeID>G93f0a3bb-1fdf-4b2f-a0b9-496b6ded7479</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G420d1097-07ac-4ba3-a43d-0cd2bcb9e9a9">
+              <Name>Max Diag Order</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Diag Order-->
+                        <AttributeID>G93f0a3bb-1fdf-4b2f-a0b9-496b6ded7479</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DiagOrder" />
+        </Attribute>
+        <Attribute ID="Ga164253a-18b7-4ef6-9c75-fc2a073d6183">
+          <Name>Start Of Care</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="G136f39db-6288-4de0-89b5-a0dffe864850">
+              <Name>Start Of Care Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Start Of Care-->
+                        <AttributeID>Ga164253a-18b7-4ef6-9c75-fc2a073d6183</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G2dd42466-882a-4815-8b90-454d413c7533">
+              <Name>Start Of Care Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Start Of Care-->
+                        <AttributeID>Ga164253a-18b7-4ef6-9c75-fc2a073d6183</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Ga0ba0803-53ed-426d-99eb-de692f47f638">
+              <Name>Start Of Care Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Start Of Care-->
+                        <AttributeID>Ga164253a-18b7-4ef6-9c75-fc2a073d6183</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Gb269e8a9-a8b2-4a90-9c73-faff887568fd">
+              <Name>Start Of Care Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Start Of Care-->
+                        <AttributeID>Ga164253a-18b7-4ef6-9c75-fc2a073d6183</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="Gb5a44173-c50f-4cb0-beaa-edd58d7d22d5">
+              <Name>First Start Of Care</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Start Of Care-->
+                        <AttributeID>Ga164253a-18b7-4ef6-9c75-fc2a073d6183</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G17919946-878a-409a-bc0d-56db261a6c9c">
+              <Name>Last Start Of Care</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Start Of Care-->
+                        <AttributeID>Ga164253a-18b7-4ef6-9c75-fc2a073d6183</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="StartOfCare" />
+        </Attribute>
+        <Attribute ID="Gf20a7af8-819d-458c-90d9-0fbf59f65956">
+          <Name>Discharge Date</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="G620b6df3-c654-4b25-aabb-73293d02e8af">
+              <Name>Discharge Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Discharge Date-->
+                        <AttributeID>Gf20a7af8-819d-458c-90d9-0fbf59f65956</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G88628122-3a39-4589-98c3-d5ce1ab2203d">
+              <Name>Discharge Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Discharge Date-->
+                        <AttributeID>Gf20a7af8-819d-458c-90d9-0fbf59f65956</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G50d6241f-b1a0-4156-acaf-c28dbdfb7e82">
+              <Name>Discharge Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Discharge Date-->
+                        <AttributeID>Gf20a7af8-819d-458c-90d9-0fbf59f65956</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Gfd7ce4a6-4958-4459-a04a-3815008d532d">
+              <Name>Discharge Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Discharge Date-->
+                        <AttributeID>Gf20a7af8-819d-458c-90d9-0fbf59f65956</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="Ga558301e-dfce-46e1-9598-964e8cd0829f">
+              <Name>First Discharge Date</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Discharge Date-->
+                        <AttributeID>Gf20a7af8-819d-458c-90d9-0fbf59f65956</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gd88aaba1-dab2-4c08-b90b-2f9b249428db">
+              <Name>Last Discharge Date</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Discharge Date-->
+                        <AttributeID>Gf20a7af8-819d-458c-90d9-0fbf59f65956</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DischargeDate" />
+        </Attribute>
+        <Attribute ID="G8a59d550-91a3-4dcc-8161-e0358ff6721d">
+          <Name>MI</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="MI" />
+        </Attribute>
+        <Attribute ID="G0fe0f277-3626-497b-abf3-40385c4b296d">
+          <Name>Address 1</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>22</Width>
+          <ValueSelection>List</ValueSelection>
+          <Column Name="Address1" />
+        </Attribute>
+        <Attribute ID="G615a1c7c-0b43-4bbf-a3ea-770340e51f50">
+          <Name>Address 2</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Address2" />
+        </Attribute>
+        <Attribute ID="Ge0ef23be-d795-49a0-88a3-6e87594ab3d3">
+          <Name>City</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>14</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="City" />
+        </Attribute>
+        <Attribute ID="G33cb433b-3a4e-423d-b939-4e3b58954505">
+          <Name>Home Phone</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>10</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="HomePhone" />
+        </Attribute>
+        <Attribute ID="Ge5c76203-a164-45a2-b64c-412aa5cedef1">
+          <Name>Zip</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Zip" />
+        </Attribute>
+        <Attribute ID="G480b62e2-e3df-4499-9aee-aa0471e381a4">
+          <Name>State</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="State" />
+        </Attribute>
+        <Attribute ID="G72b17a91-d4d0-43ec-9b84-3eca8ddd6373">
+          <Name>Work Phone</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>2</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="WorkPhone" />
+        </Attribute>
+        <Attribute ID="Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3">
+          <Name>DOB</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="G4c91ca74-ad64-4268-8b32-90c5cecd52e7">
+              <Name>DOB Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--DOB-->
+                        <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gb541e463-0184-4e0a-9687-7dc0a52a52ec">
+              <Name>DOB Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--DOB-->
+                        <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G6b20ca17-c891-4cc6-b641-8f28f59af5f0">
+              <Name>DOB Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--DOB-->
+                        <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="Ge60d1de0-0ccc-4e6c-bb20-a76699500562">
+              <Name>DOB Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--DOB-->
+                        <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="Ga9ad5c03-9ada-4648-a644-d9a889ed23c0">
+              <Name>First DOB</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--DOB-->
+                        <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gb60f176c-6a95-4d40-8797-a15134330b09">
+              <Name>Last DOB</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--DOB-->
+                        <AttributeID>Gda8e54ae-11eb-4cfe-acb6-819a8754a3e3</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DOB" />
+        </Attribute>
+        <Attribute ID="G8fab114e-c520-4856-ba43-8da31e6858ed">
+          <Name>SSN</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>9</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="SSN" />
+        </Attribute>
+        <Attribute ID="G9cfabaea-5b13-462c-8740-f3407cb1402c">
+          <Name>Sex</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Sex" />
+        </Attribute>
+        <Attribute ID="Gd640c3f5-5da4-4717-83a4-65ae15b49402">
+          <Name>Race ID</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="RaceID" />
+        </Attribute>
+        <Attribute ID="G68c4c5eb-9e8f-4f31-9029-cfd4e88eba45">
+          <Name>Marital Status ID</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>1</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="MaritalStatusID" />
+        </Attribute>
+        <Attribute ID="Ge829098e-4f74-4204-b4c4-c00697a69d6b">
+          <Name>Date Entered</Name>
+          <DataType>DateTime</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Format>d</Format>
+          <EnableDrillthrough>true</EnableDrillthrough>
+          <ContextualName>Merge</ContextualName>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Variations>
+            <Attribute ID="G464a2928-72d6-43bb-b747-0712ed4d581e">
+              <Name>Entered Day</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Day</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Date Entered-->
+                        <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="G46ee5938-d034-4d50-9bf5-3cec89615147">
+              <Name>Entered Month</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Month</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Date Entered-->
+                        <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+            </Attribute>
+            <Attribute ID="Gcde66abf-ce7e-488f-ae6e-5e4a778285da">
+              <Name>Entered Year</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Year</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Date Entered-->
+                        <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>0000</Format>
+            </Attribute>
+            <Attribute ID="G33053f92-e93a-4ab3-b643-2e0a1525aa54">
+              <Name>Entered Quarter</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Quarter</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Date Entered-->
+                        <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <SortDirection>Ascending</SortDirection>
+              <Format>Q0</Format>
+            </Attribute>
+            <Attribute ID="G4f52f2d6-f501-4202-8621-318814fd3a6a">
+              <Name>First Date Entered</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Date Entered-->
+                        <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="G3d9ba6a6-aead-4628-ad4e-969c3804d618">
+              <Name>Last Date Entered</Name>
+              <DataType>DateTime</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Date Entered-->
+                        <AttributeID>Ge829098e-4f74-4204-b4c4-c00697a69d6b</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <Format>d</Format>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="DateEntered" />
+        </Attribute>
+        <Attribute ID="Gb1b7dc23-1278-41e3-b716-f3a192066c52">
+          <Name>EMR Document</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>5</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="EMR_Document" />
+        </Attribute>
+        <Attribute ID="G08c3dd75-6356-40f9-b0c0-22c8b0532917">
+          <Name>Discharge Reason</Name>
+          <DataType>String</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Ascending</SortDirection>
+          <Width>28</Width>
+          <ValueSelection>Dropdown</ValueSelection>
+          <Column Name="Discharge Reason" />
+        </Attribute>
+        <Attribute ID="Gb8da040b-be5b-4055-baee-74a9426b70f9">
+          <Name>Length Of Stay</Name>
+          <DataType>Integer</DataType>
+          <Nullable>true</Nullable>
+          <SortDirection>Descending</SortDirection>
+          <Width>7</Width>
+          <Format>g</Format>
+          <!--Total Length Of Stay-->
+          <DefaultAggregateAttributeID>G4dc73d96-32b0-4c71-97ab-27296732afc0</DefaultAggregateAttributeID>
+          <ValueSelection>List</ValueSelection>
+          <Variations>
+            <Attribute ID="G4dc73d96-32b0-4c71-97ab-27296732afc0">
+              <Name>Total Length Of Stay</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Sum</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Length Of Stay-->
+                        <AttributeID>Gb8da040b-be5b-4055-baee-74a9426b70f9</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gead0fb6e-74f3-49b4-88cb-e1edcdbaf6ac">
+              <Name>Avg Length Of Stay</Name>
+              <DataType>Decimal</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Avg</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Length Of Stay-->
+                        <AttributeID>Gb8da040b-be5b-4055-baee-74a9426b70f9</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gdbdaa010-4e78-4152-8655-58d89ed3b0d2">
+              <Name>Min Length Of Stay</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Min</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Length Of Stay-->
+                        <AttributeID>Gb8da040b-be5b-4055-baee-74a9426b70f9</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+            <Attribute ID="Gb0eba0a7-266a-4644-8976-6dcbbdcca031">
+              <Name>Max Length Of Stay</Name>
+              <DataType>Integer</DataType>
+              <Nullable>true</Nullable>
+              <Expression>
+                <Function>
+                  <FunctionName>Max</FunctionName>
+                  <Arguments>
+                    <Expression>
+                      <AttributeRef>
+                        <!--Length Of Stay-->
+                        <AttributeID>Gb8da040b-be5b-4055-baee-74a9426b70f9</AttributeID>
+                      </AttributeRef>
+                    </Expression>
+                  </Arguments>
+                </Function>
+              </Expression>
+              <IsAggregate>true</IsAggregate>
+              <SortDirection>Descending</SortDirection>
+              <EnableDrillthrough>true</EnableDrillthrough>
+            </Attribute>
+          </Variations>
+          <Column Name="Length of Stay" />
+        </Attribute>
+        <Attribute ID="G3c2dd9f1-290a-48c9-bc72-56493de209a4">
+          <Name>Patient_Count</Name>
+          <DataType>Integer</DataType>
+          <Expression>
+            <Function>
+              <FunctionName>CountDistinct</FunctionName>
+              <Arguments>
+                <Expression>
+                  <AttributeRef>
+                    <!--Pat ID-->
+                    <AttributeID>G9e406764-ea1a-4b38-90ec-03a71c12d2dd</AttributeID>
+                  </AttributeRef>
+                </Expression>
+              </Arguments>
+            </Function>
+          </Expression>
+        </Attribute>
+      </Fields>
+      <Table Name="Patient Census" />
+    </Entity>
+  </Entities>
+</SemanticModel>

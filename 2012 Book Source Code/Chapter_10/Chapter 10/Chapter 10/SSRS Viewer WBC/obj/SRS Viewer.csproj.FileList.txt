@@ -1,0 +1,8 @@
+bin\Debug\SRS Viewer.exe
+bin\Debug\SRS Viewer.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SRS_Viewer.Form1.resources
+obj\Debug\SRS_Viewer.Properties.Resources.resources
+obj\Debug\SRS Viewer.csproj.GenerateResource.Cache
+obj\Debug\SRS Viewer.exe
+obj\Debug\SRS Viewer.pdb

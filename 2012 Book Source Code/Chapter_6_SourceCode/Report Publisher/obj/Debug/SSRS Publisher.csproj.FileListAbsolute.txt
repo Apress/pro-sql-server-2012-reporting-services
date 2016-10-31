@@ -1,0 +1,29 @@
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\bin\Debug\SSRS Publisher.exe.config
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\bin\Debug\SSRS Publisher.exe
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\bin\Debug\SSRS Publisher.pdb
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\obj\Debug\SSRS_Publisher.Properties.Resources.resources
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\obj\Debug\SSRS_Publisher.Publisher.resources
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\obj\Debug\SSRS Publisher.csproj.GenerateResource.Cache
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\obj\Debug\SSRS Publisher.exe
+C:\Users\smcgehee\Dropbox\Writing\SSRS Denali\Extras\Chapter 7\Report Publisher\obj\Debug\SSRS Publisher.pdb
+C:\PRO_SSRS\Chapter 6\Report Publisher\bin\Debug\SSRS Publisher.exe.config
+C:\PRO_SSRS\Chapter 6\Report Publisher\bin\Debug\SSRS Publisher.exe
+C:\PRO_SSRS\Chapter 6\Report Publisher\bin\Debug\SSRS Publisher.pdb
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\SSRS_Publisher.Properties.Resources.resources
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\SSRS_Publisher.Publisher.resources
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\SSRS Publisher.exe
+C:\PRO_SSRS\Chapter 6\Report Publisher\obj\Debug\SSRS Publisher.pdb
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\SSRS_Publisher.Properties.Resources.resources
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\SSRS_Publisher.Publisher.resources
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\SSRS Publisher.pdb
+C:\PRO_SSRS\CH6\Report Publisher\bin\Debug\SSRS Publisher.exe.config
+C:\PRO_SSRS\CH6\Report Publisher\bin\Debug\SSRS Publisher.exe
+C:\PRO_SSRS\CH6\Report Publisher\bin\Debug\SSRS Publisher.pdb
+C:\PRO_SSRS\CH6\Report Publisher\obj\Debug\SSRS Publisher.exe

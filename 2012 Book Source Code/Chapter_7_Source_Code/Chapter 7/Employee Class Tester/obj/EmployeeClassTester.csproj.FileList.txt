@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\EmployeeClassTester.csproj.GenerateResource.Cache
+obj\Debug\HealthWare.Tester.resources
+obj\Debug\HealthWare.Properties.Resources.resources
+bin\Debug\EmployeeClassTester.exe
+bin\Debug\EmployeeClassTester.pdb
+bin\Debug\\Employee.dll
+bin\Debug\\Employee.pdb
+obj\Debug\EmployeeClassTester.exe
+obj\Debug\EmployeeClassTester.pdb

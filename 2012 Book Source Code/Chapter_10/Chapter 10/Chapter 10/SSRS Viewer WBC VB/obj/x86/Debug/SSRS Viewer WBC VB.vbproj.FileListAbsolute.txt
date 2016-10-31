@@ -1,0 +1,27 @@
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\bin\Debug\SSRS Viewer WBC VB.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\bin\Debug\SSRS Viewer WBC VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\bin\Debug\SSRS Viewer WBC VB.xml
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\SSRS_Viewer_WBC_VB.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\SSRS_Viewer_WBC_VB.ViewerWBC.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.xml
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.exe
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.xml
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\bin\Debug\SSRS Viewer WBC VB.exe
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\bin\Debug\SSRS Viewer WBC VB.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\bin\Debug\SSRS Viewer WBC VB.xml
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\SSRS_Viewer_WBC_VB.Resources.resources
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\SSRS_Viewer_WBC_VB.ViewerWBC.resources
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer WBC VB\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.exe
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.xml
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer WBC VB\obj\x86\Debug\SSRS Viewer WBC VB.pdb

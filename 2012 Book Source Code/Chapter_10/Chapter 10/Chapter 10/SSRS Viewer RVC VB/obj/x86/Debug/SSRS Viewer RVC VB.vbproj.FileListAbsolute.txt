@@ -1,0 +1,37 @@
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.xml
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\SSRS_Viewer_RVC_VB.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.xml
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\RdlCompile.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\RdlCompile.compiled
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\SSRS_Viewer_RVC_VB.ViewerRVC.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.exe.config
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC VB\obj\x86\Debug\SSRS_Viewer_RVC_VB.GetParameters.resources
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.exe.config
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.exe
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.xml
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\SSRS_Viewer_RVC_VB.GetParameters.resources
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\SSRS_Viewer_RVC_VB.ViewerRVC.resources
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\SSRS_Viewer_RVC_VB.Resources.resources
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\RdlCompile.cache
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\RdlCompile.compiled
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.exe
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.xml
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS Viewer RVC VB\obj\x86\Debug\GenerateResource.write.4.tlog
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer RVC VB\bin\Debug\SSRS Viewer RVC VB.exe.config
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.exe
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.xml
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\Chapter 10 Source Code\Chapter 10\SSRS Viewer RVC VB\obj\x86\Debug\SSRS Viewer RVC VB.pdb

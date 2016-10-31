@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{999D2CB9-9277-4465-A902-1604ED3686A3}") = "Patient Census", "Patient Census\Patient Census.smdlproj", "{580FAED6-D1C1-4C95-AADD-F243499B6878}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Production|Default = Production|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{580FAED6-D1C1-4C95-AADD-F243499B6878}.Production|Default.ActiveCfg = Production
+		{580FAED6-D1C1-4C95-AADD-F243499B6878}.Production|Default.Build.0 = Production
+		{580FAED6-D1C1-4C95-AADD-F243499B6878}.Production|Default.Deploy.0 = Production
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

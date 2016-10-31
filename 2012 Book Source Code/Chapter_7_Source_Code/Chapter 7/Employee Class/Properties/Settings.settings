@@ -1,0 +1,11 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HealthWare.Properties" GeneratedClassName="Settings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings>
+    <Setting Name="Employee_EmployeeWS_Employee" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:2066/Employee%20Web%20Service/Employee.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

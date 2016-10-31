@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
+  <DataSet Name="">
+    <Query>
+      <DataSourceReference>Pro_SSRSExecutionLog</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@StartDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+        <DataSetParameter Name="@EndDate">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT        
+	ExecutionLogID
+	, InstanceName
+	, ItemPath
+	, UserName
+	, ExecutionId
+	, RequestType
+	, Format
+	, Parameters
+	, ItemAction
+	, TimeStart
+	, TimeEnd
+	, DATEPART(d, TimeStart) AS DayOfMonth
+	, DATEPART(WEEKDAY, TimeStart) AS DayOfWeek
+	, TimeDataRetrieval
+	, TimeProcessing
+	, TimeRendering
+	, Source
+	, Status
+	, ByteCount
+	, [RowCount]
+	, AdditionalInfo
+FROM            
+	ExecutionLog WITH (NOLOCK)
+WHERE        
+	CONVERT(DATE, TimeStart) BETWEEN DATEADD(SS, 1, DATEADD(SS, - 1, @StartDate)) AND DATEADD(SS, - 1, DATEADD(dd, 1, @EndDate))</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="ExecutionLogID">
+        <DataField>ExecutionLogID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="InstanceName">
+        <DataField>InstanceName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ItemPath">
+        <DataField>ItemPath</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="UserName">
+        <DataField>UserName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ExecutionId">
+        <DataField>ExecutionId</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="RequestType">
+        <DataField>RequestType</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Format">
+        <DataField>Format</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Parameters">
+        <DataField>Parameters</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ItemAction">
+        <DataField>ItemAction</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TimeStart">
+        <DataField>TimeStart</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="TimeEnd">
+        <DataField>TimeEnd</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="TimeDataRetrieval">
+        <DataField>TimeDataRetrieval</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DayOfMonth">
+        <DataField>DayOfMonth</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="TimeProcessing">
+        <DataField>TimeProcessing</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="DayOfWeek">
+        <DataField>DayOfWeek</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="TimeRendering">
+        <DataField>TimeRendering</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Source">
+        <DataField>Source</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Status">
+        <DataField>Status</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ByteCount">
+        <DataField>ByteCount</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="RowCount">
+        <DataField>RowCount</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="AdditionalInfo">
+        <DataField>AdditionalInfo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

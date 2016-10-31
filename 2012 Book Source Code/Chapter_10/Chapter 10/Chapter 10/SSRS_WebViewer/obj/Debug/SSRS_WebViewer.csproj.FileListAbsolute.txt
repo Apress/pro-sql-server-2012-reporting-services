@@ -1,0 +1,10 @@
+C:\PRO_SSRS_Final\Chapter 7\SSRS_WebViewer\bin\SSRS_WebViewer.dll
+C:\PRO_SSRS_Final\Chapter 7\SSRS_WebViewer\bin\SSRS_WebViewer.pdb
+C:\PRO_SSRS_Final\Chapter 7\SSRS_WebViewer\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS_WebViewer\obj\Debug\SSRS_WebViewer.dll
+C:\PRO_SSRS_Final\Chapter 7\SSRS_WebViewer\obj\Debug\SSRS_WebViewer.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS_WebViewer\bin\SSRS_WebViewer.dll
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS_WebViewer\bin\SSRS_WebViewer.pdb
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS_WebViewer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS_WebViewer\obj\Debug\SSRS_WebViewer.dll
+C:\Users\bmcdonald\Dropbox\Apress Pro SQL Server Reporting Services\2012_New_SourceCode\SSRS_WebViewer\obj\Debug\SSRS_WebViewer.pdb

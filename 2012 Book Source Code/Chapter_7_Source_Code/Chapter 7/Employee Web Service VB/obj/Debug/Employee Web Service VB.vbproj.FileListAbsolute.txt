@@ -1,0 +1,10 @@
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\bin\Employee Web Service VB.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\bin\Employee Web Service VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\bin\Employee Web Service VB.xml
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\Employee_Web_Service_VB.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\Employee Web Service VB.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\Employee Web Service VB.xml
+C:\PRO_SSRS_Final\Chapter 7\Employee Web Service VB\obj\Debug\Employee Web Service VB.pdb

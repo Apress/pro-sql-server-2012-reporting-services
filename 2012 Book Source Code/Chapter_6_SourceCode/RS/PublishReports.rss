@@ -1,0 +1,80 @@
+Dim parentPath As String = "/Pro_SSRS/Chapter 6"
+Dim reportPath As String = "C:\Pro_SSRS\CH6\RS\"
+
+Public Sub Main()
+
+    ' Initialize the reporting services credentials
+    rs.Credentials = System.Net.CredentialCache.DefaultCredentials
+    
+    ' Pass our data source information to the create data source function
+    CreateDataSource("Pro_SSRS", "SQL", "data source=(local);initial catalog=Pro_SSRS")
+    
+    ' Pass our report name to the deploy report function
+    DeployReport("EmployeeServiceCost")
+
+End Sub
+
+Public Sub CreateDataSource(name As String, extension As String, connectionString As String)
+    ' Define the data source definition.
+    Dim dataSourceDefinition As New DataSourceDefinition()
+    
+    dataSourceDefinition.CredentialRetrieval = CredentialRetrievalEnum.Integrated
+    dataSourceDefinition.ConnectString = connectionString
+    dataSourceDefinition.Enabled = True
+    dataSourceDefinition.EnabledSpecified = True
+    dataSourceDefinition.Extension = extension
+    dataSourceDefinition.ImpersonateUser = False
+    dataSourceDefinition.ImpersonateUserSpecified = True
+    
+    'Use the default prompt string.
+    dataSourceDefinition.Prompt = Nothing
+    dataSourceDefinition.WindowsCredentials = False
+
+    Try
+        ' Create the datasource through the web service method
+        rs.CreateDataSource(name, parentPath, False, dataSourceDefinition, Nothing)
+        
+        ' Diplay success message on creation
+        Console.WriteLine("Data source {0} created successfully", name)
+    Catch e As Exception
+        ' If the creation failed, catch execption and display the result
+        Console.WriteLine(e.Message)
+    End Try
+    
+End Sub 
+
+Public Sub DeployReport(ByVal reportName As String)
+
+    Dim definition As [Byte]() = Nothing
+    Dim warnings As Warning() = Nothing    
+
+    Try
+        ' Attempt to open the report as a file stream to read report definition information
+        Dim stream As FileStream = File.OpenRead(reportPath + reportName + ".rdl")
+        definition = New [Byte](stream.Length) {}
+        stream.Read(definition, 0, CInt(stream.Length))
+        stream.Close()
+        
+        Try
+	    ' Attempt to deploy the reportvia the web service
+	    warnings = rs.CreateReport(reportName, parentPath, False, definition, Nothing)
+	
+	    If Not (warnings Is Nothing) Then
+	        Dim warning As Warning
+	        For Each warning In warnings
+	           Console.WriteLine(warning.Message)
+	        Next warning
+	
+	    Else
+	        Console.WriteLine("Report: {0} published successfully with no warnings", reportName)
+	    End If
+	
+	Catch e As Exception
+	        Console.WriteLine(e.Message)
+        End Try
+
+    Catch e As IOException
+        Console.WriteLine(e.Message)
+    End Try
+    
+End Sub 

@@ -1,0 +1,18 @@
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\bin\Debug\SSRS Viewer WBC.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\bin\Debug\SSRS Viewer WBC.pdb
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\SSRS_Viewer_WBC.ViewerWBC.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\SSRS_Viewer_WBC.Properties.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\SSRS Viewer WBC.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer WBC\obj\Debug\SSRS Viewer WBC.pdb
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\bin\Debug\SSRS Viewer WBC.exe
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\bin\Debug\SSRS Viewer WBC.pdb
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\SSRS_Viewer_WBC.ViewerWBC.resources
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\SSRS_Viewer_WBC.Properties.Resources.resources
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\SSRS Viewer WBC.exe
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer WBC\obj\Debug\SSRS Viewer WBC.pdb

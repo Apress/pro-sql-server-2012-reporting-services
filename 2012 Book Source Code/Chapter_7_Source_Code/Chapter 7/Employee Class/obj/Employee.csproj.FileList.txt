@@ -1,0 +1,8 @@
+..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\Employee.dll.config
+..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\Employee.dll
+..\..\..\..\..\..\..\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\Employee.pdb
+..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL.3\Reporting Services\ReportServer\Employee.dll.config
+..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL.3\Reporting Services\ReportServer\bin\Employee.dll.config
+..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL.3\Reporting Services\ReportServer\bin\Employee.dll
+..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL.3\Reporting Services\ReportServer\bin\Employee.XmlSerializers.dll
+..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\MSSQL.3\Reporting Services\ReportServer\bin\Employee.pdb

@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <PageHeight>11in</PageHeight>
+  <rd:DrawGrid>false</rd:DrawGrid>
+  <rd:SnapToGrid>false</rd:SnapToGrid>
+  <rd:GridSpacing>0.25in</rd:GridSpacing>
+  <Body>
+    <Style />
+    <Height>0in</Height>
+    <ReportItems>
+      <Textbox Name="Title">
+        <Left>0.5in</Left>
+        <Top>0.5in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>7.5in</Width>
+        <Height>0.5in</Height>
+        <Style>
+          <FontWeight>Bold</FontWeight>
+          <PaddingLeft>6pt</PaddingLeft>
+          <PaddingTop>6pt</PaddingTop>
+          <FontSize>18pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>6pt</PaddingBottom>
+          <PaddingRight>6pt</PaddingRight>
+        </Style>
+        <Value>Average Length of Stay</Value>
+      </Textbox>
+      <Matrix Name="matrix">
+        <Width>0in</Width>
+        <Corner>
+          <ReportItems>
+            <Rectangle Name="matrix_corner">
+              <ReportItems>
+                <Textbox Name="DischargeReason_Header">
+                  <Left>0in</Left>
+                  <Top>0in</Top>
+                  <CanGrow>true</CanGrow>
+                  <Width>1.625in</Width>
+                  <Height>0.6875in</Height>
+                  <UserSort>
+                    <SortExpressionScope>matrix_DischargeReason</SortExpressionScope>
+                    <SortExpression>=Fields!DischargeReason.Value</SortExpression>
+                  </UserSort>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <BackgroundColor>#518ae5</BackgroundColor>
+                    <PaddingTop>4pt</PaddingTop>
+                    <FontSize>8pt</FontSize>
+                    <TextAlign>Left</TextAlign>
+                    <Color>White</Color>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <PaddingRight>2pt</PaddingRight>
+                  </Style>
+                  <Value>Discharge Reason</Value>
+                </Textbox>
+              </ReportItems>
+              <Style />
+            </Rectangle>
+          </ReportItems>
+        </Corner>
+        <RowGroupings>
+          <RowGrouping>
+            <DynamicRows>
+              <Grouping Name="matrix_DischargeReason">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!DischargeReason.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="DischargeReason_Value">
+                  <CanGrow>true</CanGrow>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>Normal</FontWeight>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <PaddingTop>4pt</PaddingTop>
+                    <FontSize>8pt</FontSize>
+                    <TextAlign>Left</TextAlign>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <PaddingRight>2pt</PaddingRight>
+                  </Style>
+                  <Value>=Fields!DischargeReason.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=IIf(True, Fields!DischargeReason.Value, Nothing)</SortExpression>
+                </SortBy>
+              </Sorting>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="DischargeReason_SubtotalHeader">
+                    <CanGrow>true</CanGrow>
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontWeight>Normal</FontWeight>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <BackgroundColor>#d3dcfa</BackgroundColor>
+                      <PaddingTop>4pt</PaddingTop>
+                      <FontSize>8pt</FontSize>
+                      <TextAlign>Left</TextAlign>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <PaddingRight>2pt</PaddingRight>
+                    </Style>
+                    <Value>Total</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicRows>
+            <Width>1.625in</Width>
+            <FixedHeader>true</FixedHeader>
+          </RowGrouping>
+        </RowGroupings>
+        <Style />
+        <DataSetName>dataSet</DataSetName>
+        <MatrixColumns>
+          <MatrixColumn>
+            <Width>0.8125in</Width>
+          </MatrixColumn>
+        </MatrixColumns>
+        <Height>0in</Height>
+        <ColumnGroupings>
+          <ColumnGrouping>
+            <Height>0.4375in</Height>
+            <DynamicColumns>
+              <Grouping Name="matrix_ColumnGroupsHeader">
+                <GroupExpressions>
+                  <GroupExpression>ColumnGroupsHeader</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="textbox2">
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>Bold</FontWeight>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <BackgroundColor>#518ae5</BackgroundColor>
+                    <PaddingTop>4pt</PaddingTop>
+                    <FontSize>8pt</FontSize>
+                    <TextAlign>Left</TextAlign>
+                    <Color>White</Color>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <PaddingRight>2pt</PaddingRight>
+                  </Style>
+                  <Value>Marital Status ID (Avg Length Of Stay)</Value>
+                </Textbox>
+              </ReportItems>
+            </DynamicColumns>
+            <FixedHeader>true</FixedHeader>
+          </ColumnGrouping>
+          <ColumnGrouping>
+            <Height>0.25in</Height>
+            <DynamicColumns>
+              <Grouping Name="matrix_MaritalStatusID">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!MaritalStatusID.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <ReportItems>
+                <Textbox Name="MaritalStatusID_Value">
+                  <CanGrow>true</CanGrow>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontWeight>Normal</FontWeight>
+                    <PaddingLeft>2pt</PaddingLeft>
+                    <BackgroundColor>#518ae5</BackgroundColor>
+                    <PaddingTop>4pt</PaddingTop>
+                    <FontSize>8pt</FontSize>
+                    <TextAlign>Left</TextAlign>
+                    <Color>White</Color>
+                    <PaddingBottom>2pt</PaddingBottom>
+                    <PaddingRight>2pt</PaddingRight>
+                  </Style>
+                  <Value>=Fields!MaritalStatusID.Value</Value>
+                </Textbox>
+              </ReportItems>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=IIf(True, Fields!MaritalStatusID.Value, Nothing)</SortExpression>
+                </SortBy>
+              </Sorting>
+              <Subtotal>
+                <ReportItems>
+                  <Textbox Name="MaritalStatusID_SubtotalHeader">
+                    <CanGrow>true</CanGrow>
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontWeight>Normal</FontWeight>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <BackgroundColor>#518ae5</BackgroundColor>
+                      <PaddingTop>4pt</PaddingTop>
+                      <FontSize>8pt</FontSize>
+                      <TextAlign>Left</TextAlign>
+                      <Color>White</Color>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <PaddingRight>2pt</PaddingRight>
+                    </Style>
+                    <Value>Total</Value>
+                  </Textbox>
+                </ReportItems>
+              </Subtotal>
+            </DynamicColumns>
+            <FixedHeader>true</FixedHeader>
+          </ColumnGrouping>
+        </ColumnGroupings>
+        <Left>0.5in</Left>
+        <MatrixRows>
+          <MatrixRow>
+            <MatrixCells>
+              <MatrixCell>
+                <ReportItems>
+                  <Textbox Name="AvgLengthOfStay_Value">
+                    <CanGrow>true</CanGrow>
+                    <Action>
+                      <Drillthrough>
+                        <Parameters>
+                          <Parameter Name="rs:EntityID">
+                            <Value>Gec1a060b-7185-4cb9-b030-22df6b149d14</Value>
+                          </Parameter>
+                          <Parameter Name="rs:DrillType">
+                            <Value>List</Value>
+                          </Parameter>
+                          <Parameter Name="rs:Command">
+                            <Value>Drillthrough</Value>
+                          </Parameter>
+                          <Parameter Name="DrillthroughContext">
+                            <Value>=Code.DrillthroughContextBuilder.CreateAsString(DataSets!dataSet.RewrittenCommandText, new String() { "AvgLengthOfStay_Sum", "AvgLengthOfStay_Count" }, "&lt;SelectedPath xmlns=""http" &amp; Chr(58) &amp; "//schemas.microsoft.com/sqlserver/2004/10/semanticmodeling"" /&gt;", new String() { "DischargeReason", "MaritalStatusID" }, new Object() { Fields!DischargeReason.Value, Fields!MaritalStatusID.Value }, new Boolean() { InScope("matrix_DischargeReason"), InScope("matrix_MaritalStatusID") })</Value>
+                          </Parameter>
+                        </Parameters>
+                        <ReportName>/Models/Patient Census</ReportName>
+                      </Drillthrough>
+                    </Action>
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <FontWeight>Normal</FontWeight>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingTop>4pt</PaddingTop>
+                      <FontSize>8pt</FontSize>
+                      <Format>f</Format>
+                      <TextAlign>Left</TextAlign>
+                      <PaddingBottom>2pt</PaddingBottom>
+                      <PaddingRight>2pt</PaddingRight>
+                    </Style>
+                    <CustomProperties>
+                      <CustomProperty>
+                        <Name>rb:DisplayName</Name>
+                        <Value>Avg Length Of Stay</Value>
+                      </CustomProperty>
+                    </CustomProperties>
+                    <Value>=IIF(SUM(Fields!AvgLengthOfStay_Count.Value)=0,Nothing,SUM(Fields!AvgLengthOfStay_Sum.Value)/SUM(Fields!AvgLengthOfStay_Count.Value))</Value>
+                  </Textbox>
+                </ReportItems>
+              </MatrixCell>
+            </MatrixCells>
+            <Height>0.25in</Height>
+          </MatrixRow>
+        </MatrixRows>
+        <Top>1.25in</Top>
+      </Matrix>
+      <Textbox Name="FilterDescription">
+        <Left>0.5in</Left>
+        <Top>5.75in</Top>
+        <CanGrow>true</CanGrow>
+        <Width>7.5in</Width>
+        <Height>0.25in</Height>
+        <Style>
+          <FontWeight>Normal</FontWeight>
+          <PaddingLeft>3pt</PaddingLeft>
+          <PaddingTop>3pt</PaddingTop>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingBottom>3pt</PaddingBottom>
+          <PaddingRight>3pt</PaddingRight>
+        </Style>
+        <CustomProperties>
+          <CustomProperty>
+            <Name>rb:SpecialContent</Name>
+            <Value>FilterDescription</Value>
+          </CustomProperty>
+        </CustomProperties>
+        <Value>Patient Censuses with: All of (Marital Status ID not empty, Discharge Date not empty, Discharge Reason not empty, Discharge Year &gt;= (prompted))</Value>
+      </Textbox>
+    </ReportItems>
+  </Body>
+    <Width>8.5in</Width>
+  <DataSources>
+    <DataSource Name="dataSource">
+      <rd:DataSourceID>7452b4f2-46eb-4822-a0c0-1315b988047c</rd:DataSourceID>
+      <DataSourceReference>/Models/Patient Census</DataSourceReference>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="dataSet">
+      <Query>
+        <DataSourceName>dataSource</DataSourceName>
+        <CommandText>&lt;SemanticQuery xmlns="http://schemas.microsoft.com/sqlserver/2004/10/semanticmodeling" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rb="http://schemas.microsoft.com/sqlserver/2004/11/reportbuilder" xmlns:qd="http://schemas.microsoft.com/sqlserver/2004/11/semanticquerydesign"&gt;
+  &lt;Hierarchies&gt;
+    &lt;Hierarchy&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Patient Census--&gt;
+        &lt;EntityID&gt;Gec1a060b-7185-4cb9-b030-22df6b149d14&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Groupings&gt;
+        &lt;Grouping Name="DischargeReason"&gt;
+          &lt;Expression Name="DischargeReason"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Discharge Reason--&gt;
+              &lt;AttributeID&gt;G30394620-99ae-4d74-a114-004076a44b07&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+        &lt;Grouping Name="MaritalStatusID"&gt;
+          &lt;Expression Name="MaritalStatusID"&gt;
+            &lt;AttributeRef&gt;
+              &lt;!--Marital Status ID--&gt;
+              &lt;AttributeID&gt;G5be5aa62-8161-4b5b-bce7-ec7135fa11ba&lt;/AttributeID&gt;
+            &lt;/AttributeRef&gt;
+          &lt;/Expression&gt;
+        &lt;/Grouping&gt;
+      &lt;/Groupings&gt;
+      &lt;Filter&gt;
+        &lt;Expression Name="expr1"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;Function&gt;
+                  &lt;FunctionName&gt;Not&lt;/FunctionName&gt;
+                  &lt;Arguments&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;AttributeRef&gt;
+                              &lt;!--Marital Status ID--&gt;
+                              &lt;AttributeID&gt;G5be5aa62-8161-4b5b-bce7-ec7135fa11ba&lt;/AttributeID&gt;
+                            &lt;/AttributeRef&gt;
+                          &lt;/Expression&gt;
+                          &lt;Expression&gt;
+                            &lt;Null /&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                    &lt;/Expression&gt;
+                  &lt;/Arguments&gt;
+                &lt;/Function&gt;
+                &lt;CustomProperties&gt;
+                  &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                    &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                  &lt;/CustomProperty&gt;
+                &lt;/CustomProperties&gt;
+              &lt;/Expression&gt;
+              &lt;Expression&gt;
+                &lt;Function&gt;
+                  &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+                  &lt;Arguments&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;Not&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;Function&gt;
+                              &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+                              &lt;Arguments&gt;
+                                &lt;Expression&gt;
+                                  &lt;AttributeRef&gt;
+                                    &lt;!--Discharge Date--&gt;
+                                    &lt;AttributeID&gt;G38e34436-1df8-4f50-af50-4571bca9c2e8&lt;/AttributeID&gt;
+                                  &lt;/AttributeRef&gt;
+                                &lt;/Expression&gt;
+                                &lt;Expression&gt;
+                                  &lt;Null /&gt;
+                                &lt;/Expression&gt;
+                              &lt;/Arguments&gt;
+                            &lt;/Function&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                      &lt;CustomProperties&gt;
+                        &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                        &lt;/CustomProperty&gt;
+                      &lt;/CustomProperties&gt;
+                    &lt;/Expression&gt;
+                    &lt;Expression&gt;
+                      &lt;Function&gt;
+                        &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+                        &lt;Arguments&gt;
+                          &lt;Expression&gt;
+                            &lt;Function&gt;
+                              &lt;FunctionName&gt;Not&lt;/FunctionName&gt;
+                              &lt;Arguments&gt;
+                                &lt;Expression&gt;
+                                  &lt;Function&gt;
+                                    &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+                                    &lt;Arguments&gt;
+                                      &lt;Expression&gt;
+                                        &lt;AttributeRef&gt;
+                                          &lt;!--Discharge Reason--&gt;
+                                          &lt;AttributeID&gt;G30394620-99ae-4d74-a114-004076a44b07&lt;/AttributeID&gt;
+                                        &lt;/AttributeRef&gt;
+                                      &lt;/Expression&gt;
+                                      &lt;Expression&gt;
+                                        &lt;Null /&gt;
+                                      &lt;/Expression&gt;
+                                    &lt;/Arguments&gt;
+                                  &lt;/Function&gt;
+                                &lt;/Expression&gt;
+                              &lt;/Arguments&gt;
+                            &lt;/Function&gt;
+                            &lt;CustomProperties&gt;
+                              &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                                &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                              &lt;/CustomProperty&gt;
+                            &lt;/CustomProperties&gt;
+                          &lt;/Expression&gt;
+                          &lt;Expression&gt;
+                            &lt;Function&gt;
+                              &lt;FunctionName&gt;GreaterThanOrEquals&lt;/FunctionName&gt;
+                              &lt;Arguments&gt;
+                                &lt;Expression&gt;
+                                  &lt;AttributeRef&gt;
+                                    &lt;!--Discharge Year--&gt;
+                                    &lt;AttributeID&gt;Gffc37f42-e085-4c5e-b569-d7bf004c4041&lt;/AttributeID&gt;
+                                  &lt;/AttributeRef&gt;
+                                &lt;/Expression&gt;
+                                &lt;Expression&gt;
+                                  &lt;ParameterRef&gt;
+                                    &lt;ParameterName&gt;Discharge Year&lt;/ParameterName&gt;
+                                  &lt;/ParameterRef&gt;
+                                &lt;/Expression&gt;
+                              &lt;/Arguments&gt;
+                            &lt;/Function&gt;
+                            &lt;CustomProperties&gt;
+                              &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                                &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                              &lt;/CustomProperty&gt;
+                            &lt;/CustomProperties&gt;
+                          &lt;/Expression&gt;
+                        &lt;/Arguments&gt;
+                      &lt;/Function&gt;
+                    &lt;/Expression&gt;
+                  &lt;/Arguments&gt;
+                &lt;/Function&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:DisplayName"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:Filter"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;Gec1a060b-7185-4cb9-b030-22df6b149d14&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:ContextEntityNS"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:AutoChangeBaseEntity"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;expr2&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Filter&gt;
+    &lt;/Hierarchy&gt;
+  &lt;/Hierarchies&gt;
+  &lt;MeasureGroups&gt;
+    &lt;MeasureGroup&gt;
+      &lt;BaseEntity&gt;
+        &lt;!--Patient Census--&gt;
+        &lt;EntityID&gt;Gec1a060b-7185-4cb9-b030-22df6b149d14&lt;/EntityID&gt;
+      &lt;/BaseEntity&gt;
+      &lt;Measures&gt;
+        &lt;Expression Name="AvgLengthOfStay_Sum"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;Sum&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;AttributeRef&gt;
+                  &lt;!--Length Of Stay--&gt;
+                  &lt;AttributeID&gt;G6c91559b-eae2-4737-9688-dd75440a864e&lt;/AttributeID&gt;
+                &lt;/AttributeRef&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;AvgLengthOfStay&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+        &lt;Expression Name="AvgLengthOfStay_Count"&gt;
+          &lt;Function&gt;
+            &lt;FunctionName&gt;Count&lt;/FunctionName&gt;
+            &lt;Arguments&gt;
+              &lt;Expression&gt;
+                &lt;AttributeRef&gt;
+                  &lt;!--Length Of Stay--&gt;
+                  &lt;AttributeID&gt;G6c91559b-eae2-4737-9688-dd75440a864e&lt;/AttributeID&gt;
+                &lt;/AttributeRef&gt;
+              &lt;/Expression&gt;
+            &lt;/Arguments&gt;
+          &lt;/Function&gt;
+          &lt;CustomProperties&gt;
+            &lt;CustomProperty Name="qd:Design"&gt;
+              &lt;Value xsi:type="xsd:string"&gt;AvgLengthOfStay&lt;/Value&gt;
+            &lt;/CustomProperty&gt;
+          &lt;/CustomProperties&gt;
+        &lt;/Expression&gt;
+      &lt;/Measures&gt;
+    &lt;/MeasureGroup&gt;
+  &lt;/MeasureGroups&gt;
+  &lt;CalculatedAttributes&gt;
+    &lt;Expression Name="expr2"&gt;
+      &lt;Function&gt;
+        &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+        &lt;Arguments&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;Not&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;Function&gt;
+                    &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+                    &lt;Arguments&gt;
+                      &lt;Expression&gt;
+                        &lt;AttributeRef&gt;
+                          &lt;!--Marital Status ID--&gt;
+                          &lt;AttributeID&gt;G5be5aa62-8161-4b5b-bce7-ec7135fa11ba&lt;/AttributeID&gt;
+                        &lt;/AttributeRef&gt;
+                      &lt;/Expression&gt;
+                      &lt;Expression&gt;
+                        &lt;Null /&gt;
+                      &lt;/Expression&gt;
+                    &lt;/Arguments&gt;
+                  &lt;/Function&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+            &lt;CustomProperties&gt;
+              &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+              &lt;/CustomProperty&gt;
+            &lt;/CustomProperties&gt;
+          &lt;/Expression&gt;
+          &lt;Expression&gt;
+            &lt;Function&gt;
+              &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+              &lt;Arguments&gt;
+                &lt;Expression&gt;
+                  &lt;Function&gt;
+                    &lt;FunctionName&gt;Not&lt;/FunctionName&gt;
+                    &lt;Arguments&gt;
+                      &lt;Expression&gt;
+                        &lt;Function&gt;
+                          &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+                          &lt;Arguments&gt;
+                            &lt;Expression&gt;
+                              &lt;AttributeRef&gt;
+                                &lt;!--Discharge Date--&gt;
+                                &lt;AttributeID&gt;G38e34436-1df8-4f50-af50-4571bca9c2e8&lt;/AttributeID&gt;
+                              &lt;/AttributeRef&gt;
+                            &lt;/Expression&gt;
+                            &lt;Expression&gt;
+                              &lt;Null /&gt;
+                            &lt;/Expression&gt;
+                          &lt;/Arguments&gt;
+                        &lt;/Function&gt;
+                      &lt;/Expression&gt;
+                    &lt;/Arguments&gt;
+                  &lt;/Function&gt;
+                  &lt;CustomProperties&gt;
+                    &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                      &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                    &lt;/CustomProperty&gt;
+                  &lt;/CustomProperties&gt;
+                &lt;/Expression&gt;
+                &lt;Expression&gt;
+                  &lt;Function&gt;
+                    &lt;FunctionName&gt;And&lt;/FunctionName&gt;
+                    &lt;Arguments&gt;
+                      &lt;Expression&gt;
+                        &lt;Function&gt;
+                          &lt;FunctionName&gt;Not&lt;/FunctionName&gt;
+                          &lt;Arguments&gt;
+                            &lt;Expression&gt;
+                              &lt;Function&gt;
+                                &lt;FunctionName&gt;Equals&lt;/FunctionName&gt;
+                                &lt;Arguments&gt;
+                                  &lt;Expression&gt;
+                                    &lt;AttributeRef&gt;
+                                      &lt;!--Discharge Reason--&gt;
+                                      &lt;AttributeID&gt;G30394620-99ae-4d74-a114-004076a44b07&lt;/AttributeID&gt;
+                                    &lt;/AttributeRef&gt;
+                                  &lt;/Expression&gt;
+                                  &lt;Expression&gt;
+                                    &lt;Null /&gt;
+                                  &lt;/Expression&gt;
+                                &lt;/Arguments&gt;
+                              &lt;/Function&gt;
+                            &lt;/Expression&gt;
+                          &lt;/Arguments&gt;
+                        &lt;/Function&gt;
+                        &lt;CustomProperties&gt;
+                          &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                            &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                          &lt;/CustomProperty&gt;
+                        &lt;/CustomProperties&gt;
+                      &lt;/Expression&gt;
+                      &lt;Expression&gt;
+                        &lt;Function&gt;
+                          &lt;FunctionName&gt;GreaterThanOrEquals&lt;/FunctionName&gt;
+                          &lt;Arguments&gt;
+                            &lt;Expression&gt;
+                              &lt;AttributeRef&gt;
+                                &lt;!--Discharge Year--&gt;
+                                &lt;AttributeID&gt;Gffc37f42-e085-4c5e-b569-d7bf004c4041&lt;/AttributeID&gt;
+                              &lt;/AttributeRef&gt;
+                            &lt;/Expression&gt;
+                            &lt;Expression&gt;
+                              &lt;ParameterRef&gt;
+                                &lt;ParameterName&gt;Discharge Year&lt;/ParameterName&gt;
+                              &lt;/ParameterRef&gt;
+                            &lt;/Expression&gt;
+                          &lt;/Arguments&gt;
+                        &lt;/Function&gt;
+                        &lt;CustomProperties&gt;
+                          &lt;CustomProperty Name="qd:FilterCondition"&gt;
+                            &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+                          &lt;/CustomProperty&gt;
+                        &lt;/CustomProperties&gt;
+                      &lt;/Expression&gt;
+                    &lt;/Arguments&gt;
+                  &lt;/Function&gt;
+                &lt;/Expression&gt;
+              &lt;/Arguments&gt;
+            &lt;/Function&gt;
+          &lt;/Expression&gt;
+        &lt;/Arguments&gt;
+      &lt;/Function&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:Filter"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityID"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;Gec1a060b-7185-4cb9-b030-22df6b149d14&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:ContextEntityNS"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:AutoChangeBaseEntity"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+        &lt;CustomProperty Name="qd:Design"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+    &lt;Expression Name="AvgLengthOfStay"&gt;
+      &lt;AttributeRef&gt;
+        &lt;!--Avg Length Of Stay--&gt;
+        &lt;AttributeID&gt;G7f159007-ec8b-4e39-8559-0ac6c7336f4e&lt;/AttributeID&gt;
+      &lt;/AttributeRef&gt;
+      &lt;CustomProperties&gt;
+        &lt;CustomProperty Name="qd:Design"&gt;
+          &lt;Value xsi:type="xsd:string"&gt;&lt;/Value&gt;
+        &lt;/CustomProperty&gt;
+      &lt;/CustomProperties&gt;
+    &lt;/Expression&gt;
+  &lt;/CalculatedAttributes&gt;
+  &lt;Parameters&gt;
+    &lt;Parameter Name="Discharge Year"&gt;
+      &lt;DataType&gt;Integer&lt;/DataType&gt;
+      &lt;Nullable&gt;true&lt;/Nullable&gt;
+      &lt;Expression&gt;
+        &lt;Literal&gt;
+          &lt;DataType&gt;Integer&lt;/DataType&gt;
+          &lt;Value&gt;2003&lt;/Value&gt;
+        &lt;/Literal&gt;
+      &lt;/Expression&gt;
+    &lt;/Parameter&gt;
+  &lt;/Parameters&gt;
+&lt;/SemanticQuery&gt;</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="Discharge Year">
+            <Value>=Parameters!DischargeYear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+      </Query>
+      <Fields>
+        <Field Name="DischargeReason">
+          <DataField>DischargeReason</DataField>
+        </Field>
+        <Field Name="MaritalStatusID">
+          <DataField>MaritalStatusID</DataField>
+        </Field>
+        <Field Name="AvgLengthOfStay_Sum">
+          <DataField>AvgLengthOfStay_Sum</DataField>
+        </Field>
+        <Field Name="AvgLengthOfStay_Count">
+          <DataField>AvgLengthOfStay_Count</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="DischargeYear">
+      <DataType>Integer</DataType>
+      <Nullable>true</Nullable>
+      <DefaultValue>
+        <Values>
+          <Value>=2003</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Discharge Year</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <PageWidth>8.5in</PageWidth>
+</Report>

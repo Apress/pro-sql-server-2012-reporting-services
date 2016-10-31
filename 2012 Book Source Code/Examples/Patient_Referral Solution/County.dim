@@ -1,0 +1,105 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0fc154b5-c28a-4e77-a1cf-6e8216662431" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>County</ID>
+  <Name>County</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00.0000000-06:00</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00.0000000-06:00</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00.0000000-06:00</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="43879bb2-7ef8-43b1-8d4f-bbe030cfe6c4">
+    <DataSourceViewID>HW Analysis</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="c9fc89da-3426-4347-b499-bb29bacd61af">
+      <ID>County</ID>
+      <Name>County</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9534979a-ee4c-4978-964f-b53902035065">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="02aaad37-70a0-4b37-84af-fed91a2467c5">
+            <TableID>dbo_County</TableID>
+            <ColumnID>CountyID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="50972b8a-de0f-4e01-aa41-ae8329505718">
+          <AttributeID>County Server ID</AttributeID>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="551f23e7-b9c8-4129-afaf-ee8b62f1ebdb">
+          <AttributeID>Dscr</AttributeID>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="0d29a4d3-b298-400e-9996-e9703e4e7289">
+      <ID>County Server ID</ID>
+      <Name>County Server ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="75223d55-8f13-407b-87df-878164d73ff4">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="efb2f795-e306-4a5b-8c48-001fb38ea6ce">
+            <TableID>dbo_County</TableID>
+            <ColumnID>CountyServerID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+    <Attribute dwd:design-time-name="1064fcd7-e0f3-42a0-bffe-0e08b09e6af7">
+      <ID>Dscr</ID>
+      <Name>Dscr</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a7ffeef4-e95b-4d48-8fe7-e80fc0964cf6">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aa6c4dd9-b854-4864-a03d-d5f79769d542">
+            <TableID>dbo_County</TableID>
+            <ColumnID>Dscr</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+    </Attribute>
+  </Attributes>
+</Dimension>

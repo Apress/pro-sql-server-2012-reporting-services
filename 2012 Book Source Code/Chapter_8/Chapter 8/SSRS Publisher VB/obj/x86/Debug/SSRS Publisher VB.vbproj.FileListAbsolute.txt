@@ -1,0 +1,16 @@
+C:\PRO_SSRS\CH6\SSRS Publisher VB\bin\Debug\SSRS Publisher VB.exe.config
+C:\PRO_SSRS\CH6\SSRS Publisher VB\bin\Debug\SSRS Publisher VB.exe
+C:\PRO_SSRS\CH6\SSRS Publisher VB\bin\Debug\SSRS Publisher VB.pdb
+C:\PRO_SSRS\CH6\SSRS Publisher VB\bin\Debug\SSRS Publisher VB.xml
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\SSRS_Publisher_VB.Publisher.resources
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\SSRS_Publisher_VB.Resources.resources
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\SSRS Publisher VB.exe
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\SSRS Publisher VB.xml
+C:\PRO_SSRS\CH6\SSRS Publisher VB\obj\x86\Debug\SSRS Publisher VB.pdb
+C:\PRO_SSRS_Final\Chapter 8\SSRS Publisher VB\bin\Debug\SSRS Publisher VB.exe.config
+C:\PRO_SSRS_Final\Chapter 8\SSRS Publisher VB\obj\x86\Debug\SSRS Publisher VB.exe
+C:\PRO_SSRS_Final\Chapter 8\SSRS Publisher VB\obj\x86\Debug\SSRS Publisher VB.xml
+C:\PRO_SSRS_Final\Chapter 8\SSRS Publisher VB\obj\x86\Debug\SSRS Publisher VB.pdb

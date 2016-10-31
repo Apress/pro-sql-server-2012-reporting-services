@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+EmployeeVB
+</name>
+</assembly>
+<members>
+<member name="M:Employee_VB.EmployeeWS.Employee.#ctor">
+	<remarks/>
+</member><member name="E:Employee_VB.EmployeeWS.Employee.GetCostCompleted">
+	<remarks/>
+</member><member name="M:Employee_VB.EmployeeWS.Employee.GetCost(System.String,System.DateTime)">
+	<remarks/>
+</member><member name="M:Employee_VB.EmployeeWS.Employee.GetCostAsync(System.String,System.DateTime)">
+	<remarks/>
+</member><member name="M:Employee_VB.EmployeeWS.Employee.GetCostAsync(System.String,System.DateTime,System.Object)">
+	<remarks/>
+</member><member name="M:Employee_VB.EmployeeWS.Employee.CancelAsync(System.Object)">
+	<remarks/>
+</member><member name="T:Employee_VB.EmployeeWS.Employee">
+	<remarks/>
+</member><member name="T:Employee_VB.EmployeeWS.GetCostCompletedEventHandler">
+	<remarks/>
+</member><member name="P:Employee_VB.EmployeeWS.GetCostCompletedEventArgs.Result">
+	<remarks/>
+</member><member name="T:Employee_VB.EmployeeWS.GetCostCompletedEventArgs">
+	<remarks/>
+</member><member name="P:Employee_VB.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Employee_VB.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Employee_VB.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

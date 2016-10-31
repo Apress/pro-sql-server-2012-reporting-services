@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "HW_Analysis", "HW_Analysis.dwproj", "{57BE016B-F65D-4143-B260-D22D3F5DE2E2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57BE016B-F65D-4143-B260-D22D3F5DE2E2}.Development|Default.ActiveCfg = Development
+		{57BE016B-F65D-4143-B260-D22D3F5DE2E2}.Development|Default.Build.0 = Development
+		{57BE016B-F65D-4143-B260-D22D3F5DE2E2}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

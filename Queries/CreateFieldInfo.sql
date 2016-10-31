@@ -1,0 +1,23 @@
+USE Pro_SSRS
+GO
+
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.ROUTINES 
+	WHERE ROUTINE_NAME = 'sp_FieldInfo' 
+	AND SPECIFIC_SCHEMA = 'dbo')
+DROP PROCEDURE [dbo].[sp_FieldInfo]
+GO
+
+CREATE PROCEDURE [dbo].[sp_FieldInfo]  
+(
+	@column_name VARCHAR(128) = NULL
+)
+AS
+SELECT 
+	TABLE_NAME AS [Table Name]
+	, RTRIM(COLUMN_NAME) AS [Field Name]
+FROM
+	INFORMATION_SCHEMA.COLUMNS
+WHERE
+	COLUMN_NAME LIKE '%' + @column_name + '%'
+
+

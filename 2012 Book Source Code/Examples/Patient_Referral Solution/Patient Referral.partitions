@@ -1,0 +1,25 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="97eccd51-a749-4762-abca-a1dd184d252e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Patient Referral</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Referral</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="56cbe2e6-a47b-4da9-84db-5a54769f43c3">
+          <ID>Fact Referral</ID>
+          <Name>Fact Referral</Name>
+          <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="faf04139-45c3-46d9-aef6-9cf8a55fc464">
+            <DataSourceViewID>HW Analysis</DataSourceViewID>
+            <TableID>dbo_FactReferral</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Employees" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Employees" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EmployeePay">
+          <xs:complexType>
+            <xs:attribute name="EmployeePayID" type="xs:string" />
+            <xs:attribute name="EmployeeTblID" type="xs:int" />
+            <xs:attribute name="EmployeeID" type="xs:string" />
+            <xs:attribute name="StartDate" type="xs:dateTime" />
+            <xs:attribute name="Amount" type="xs:decimal" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

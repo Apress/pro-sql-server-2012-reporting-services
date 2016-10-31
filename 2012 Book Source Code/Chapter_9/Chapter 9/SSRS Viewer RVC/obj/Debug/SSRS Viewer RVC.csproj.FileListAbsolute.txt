@@ -1,0 +1,26 @@
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\bin\Debug\SSRS Viewer RVC.exe.config
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\bin\Debug\SSRS Viewer RVC.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\bin\Debug\SSRS Viewer RVC.pdb
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\SSRS_Viewer_RVC.GetParameters.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\SSRS_Viewer_RVC.ViewerRVC.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\SSRS_Viewer_RVC.Properties.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\RdlCompile.cache
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\RdlCompile.compiled
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\SSRS Viewer RVC.exe
+C:\PRO_SSRS_Final\Chapter 7\SSRS Viewer RVC\obj\Debug\SSRS Viewer RVC.pdb
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\bin\Debug\SSRS Viewer RVC.exe.config
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\bin\Debug\SSRS Viewer RVC.exe
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\bin\Debug\SSRS Viewer RVC.pdb
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\SSRS_Viewer_RVC.GetParameters.resources
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\SSRS_Viewer_RVC.ViewerRVC.resources
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\SSRS_Viewer_RVC.Properties.Resources.resources
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\RdlCompile.cache
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\RdlCompile.compiled
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\SSRS Viewer RVC.exe
+C:\PRO_SSRS_Final\Chapter 9\SSRS Viewer RVC\obj\Debug\SSRS Viewer RVC.pdb

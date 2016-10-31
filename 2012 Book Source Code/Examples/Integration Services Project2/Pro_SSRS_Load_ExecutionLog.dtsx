@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/4/2012 4:43:26 PM"
+  DTS:CreationName="SSIS.Package.3"
+  DTS:CreatorComputerName="SQLBIGEEK"
+  DTS:CreatorName="Brian K. McDonald, MCDBA, MCSD"
+  DTS:DTSID="{339DE83D-A9B7-4DC3-96E6-F38A9B643E6A}"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:LastModifiedProductVersion="11.0.1750.32"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Pro_SSRS_Load_ExecutionLog"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{2B7D8E58-1DC3-486F-B742-9F76CC077F8D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB_master]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5F646125-715C-46D6-A4D9-B925DA3296C7}"
+      DTS:ObjectName="OLEDB_master">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=master;Provider=SQLNCLI11;Integrated Security=SSPI;Application Name=SSIS-Pro_SSRS_Load_ExecutionLog-{5F646125-715C-46D6-A4D9-B925DA3296C7}(local).master;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB_Pro_SSRSExecutionLog]"
+      DTS:CreationName="OLEDB"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{6010659C-E7A6-4DAF-9650-403F482349A7}"
+      DTS:ObjectName="OLEDB_Pro_SSRSExecutionLog">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=Pro_SSRSExecutionLog;Provider=SQLNCLI11;Integrated Security=SSPI;Application Name=SSIS-Pro_SSRS_Load_ExecutionLog-{6010659C-E7A6-4DAF-9650-403F482349A7}(local).Pro_SSRSExecutionLog;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[OLEDB_ReportServer]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FEA964DD-E5DF-426A-A683-82B073F51D61}"
+      DTS:ObjectName="OLEDB_ReportServer">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=ReportServer;Provider=SQLNCLI11;Integrated Security=SSPI;Application Name=SSIS-ExecutionLog-{FEA964DD-E5DF-426A-A683-82B073F51D61}(local).ReportServer;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F8F2F3F7-C25C-4231-ABCA-96117A7CE26F}"
+      DTS:Expression="(DT_DBTIMESTAMP) (DATEADD(&quot;d&quot;, -1, GETDATE()))&#xA;"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="dtDateToLoad">
+      <DTS:VariableValue
+        DTS:DataType="7">3/18/2012</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{54977FB5-49BD-4D54-AAC2-496A204DD14F}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="intDatabaseExists">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8B989E8A-65AB-4EBE-A419-95C04B68071A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="intRecordCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - Load Recs if None Exist"
+      DTS:CreationName="SSIS.Pipeline.3"
+      DTS:DelayValidation="True"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7DD0DE54-E34D-489F-9148-1EC5F21955F9}"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - Load Recs if None Exist"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              localeId="1033"
+              name="OLEDST - Pro_SSRSExecutionLog"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ExecutionLog]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLEDB_Pro_SSRSExecutionLog]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLEDB_Pro_SSRSExecutionLog]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[InstanceName]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="InstanceName"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[InstanceName]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[InstanceName]"
+                      name="InstanceName" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[ItemPath]"
+                      cachedDataType="wstr"
+                      cachedLength="425"
+                      cachedName="ItemPath"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ItemPath]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ItemPath]"
+                      name="ItemPath" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[UserName]"
+                      cachedDataType="wstr"
+                      cachedLength="260"
+                      cachedName="UserName"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[UserName]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[UserName]"
+                      name="UserName" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[ExecutionId]"
+                      cachedDataType="wstr"
+                      cachedLength="64"
+                      cachedName="ExecutionId"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ExecutionId]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ExecutionId]"
+                      name="ExecutionId" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[RequestType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="13"
+                      cachedName="RequestType"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[RequestType]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[RequestType]"
+                      name="RequestType" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[Format]"
+                      cachedDataType="wstr"
+                      cachedLength="26"
+                      cachedName="Format"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Format]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Format]"
+                      name="Format" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[Parameters]"
+                      cachedDataType="nText"
+                      cachedName="Parameters"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Parameters]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Parameters]"
+                      name="Parameters" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[ItemAction]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="21"
+                      cachedName="ItemAction"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ItemAction]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ItemAction]"
+                      name="ItemAction" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[TimeStart]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TimeStart"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeStart]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeStart]"
+                      name="TimeStart" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[TimeEnd]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="TimeEnd"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeEnd]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeEnd]"
+                      name="TimeEnd" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[TimeDataRetrieval]"
+                      cachedDataType="i4"
+                      cachedName="TimeDataRetrieval"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeDataRetrieval]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeDataRetrieval]"
+                      name="TimeDataRetrieval" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[TimeProcessing]"
+                      cachedDataType="i4"
+                      cachedName="TimeProcessing"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeProcessing]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeProcessing]"
+                      name="TimeProcessing" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[TimeRendering]"
+                      cachedDataType="i4"
+                      cachedName="TimeRendering"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeRendering]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeRendering]"
+                      name="TimeRendering" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[Source]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Source"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Source]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Source]"
+                      name="Source" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[Status]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Status]"
+                      name="Status" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[ByteCount]"
+                      cachedDataType="i8"
+                      cachedName="ByteCount"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ByteCount]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ByteCount]"
+                      name="ByteCount" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[RowCount]"
+                      cachedDataType="i8"
+                      cachedName="RowCount"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[RowCount]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[RowCount]"
+                      name="RowCount" />
+                    <inputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].Columns[AdditionalInfo]"
+                      cachedDataType="nText"
+                      cachedName="AdditionalInfo"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[AdditionalInfo]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[AdditionalInfo]"
+                      name="AdditionalInfo" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ExecutionLogID]"
+                      dataType="i4"
+                      name="ExecutionLogID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[InstanceName]"
+                      dataType="wstr"
+                      length="38"
+                      name="InstanceName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ItemPath]"
+                      dataType="wstr"
+                      length="425"
+                      name="ItemPath" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[UserName]"
+                      dataType="wstr"
+                      length="260"
+                      name="UserName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ExecutionId]"
+                      dataType="wstr"
+                      length="64"
+                      name="ExecutionId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[RequestType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="RequestType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Format]"
+                      dataType="wstr"
+                      length="26"
+                      name="Format" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Parameters]"
+                      dataType="nText"
+                      name="Parameters" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ItemAction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="21"
+                      name="ItemAction" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeStart]"
+                      dataType="dbTimeStamp"
+                      name="TimeStart" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeEnd]"
+                      dataType="dbTimeStamp"
+                      name="TimeEnd" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeDataRetrieval]"
+                      dataType="i4"
+                      name="TimeDataRetrieval" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeProcessing]"
+                      dataType="i4"
+                      name="TimeProcessing" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[TimeRendering]"
+                      dataType="i4"
+                      name="TimeRendering" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Source]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Source" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="40"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[ByteCount]"
+                      dataType="i8"
+                      name="ByteCount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[RowCount]"
+                      dataType="i8"
+                      name="RowCount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input].ExternalColumns[AdditionalInfo]"
+                      dataType="nText"
+                      name="AdditionalInfo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              localeId="1033"
+              name="OLESRC - ReportServer ExecutionLog3"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT * FROM ReportServer.dbo.ExecutionLog3 rs
+WHERE CONVERT(DATE, TimeStart) = ?</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"0",{F8F2F3F7-C25C-4231-ABCA-96117A7CE26F};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[OLEDB_ReportServer]"
+                  connectionManagerRefId="Package.ConnectionManagers[OLEDB_ReportServer]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[InstanceName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[InstanceName]"
+                      length="38"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[InstanceName]"
+                      name="InstanceName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ItemPath]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ItemPath]"
+                      length="425"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ItemPath]"
+                      name="ItemPath"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[UserName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[UserName]"
+                      length="260"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[UserName]"
+                      name="UserName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ExecutionId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ExecutionId]"
+                      length="64"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ExecutionId]"
+                      name="ExecutionId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[RequestType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[RequestType]"
+                      length="13"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[RequestType]"
+                      name="RequestType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Format]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Format]"
+                      length="26"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Format]"
+                      name="Format"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Parameters]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Parameters]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Parameters]"
+                      name="Parameters"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ItemAction]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ItemAction]"
+                      length="21"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ItemAction]"
+                      name="ItemAction"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeStart]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeStart]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeStart]"
+                      name="TimeStart"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeEnd]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeEnd]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeEnd]"
+                      name="TimeEnd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeDataRetrieval]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeDataRetrieval]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeDataRetrieval]"
+                      name="TimeDataRetrieval"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeProcessing]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeProcessing]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeProcessing]"
+                      name="TimeProcessing"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeRendering]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeRendering]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[TimeRendering]"
+                      name="TimeRendering"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Source]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Source]"
+                      length="8"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Source]"
+                      name="Source"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      length="40"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ByteCount]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ByteCount]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[ByteCount]"
+                      name="ByteCount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[RowCount]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[RowCount]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[RowCount]"
+                      name="RowCount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[AdditionalInfo]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[AdditionalInfo]"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].Columns[AdditionalInfo]"
+                      name="AdditionalInfo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[InstanceName]"
+                      dataType="wstr"
+                      length="38"
+                      name="InstanceName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ItemPath]"
+                      dataType="wstr"
+                      length="425"
+                      name="ItemPath" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[UserName]"
+                      dataType="wstr"
+                      length="260"
+                      name="UserName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ExecutionId]"
+                      dataType="wstr"
+                      length="64"
+                      name="ExecutionId" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[RequestType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      name="RequestType" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Format]"
+                      dataType="wstr"
+                      length="26"
+                      name="Format" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Parameters]"
+                      dataType="nText"
+                      name="Parameters" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ItemAction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="21"
+                      name="ItemAction" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeStart]"
+                      dataType="dbTimeStamp"
+                      name="TimeStart" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeEnd]"
+                      dataType="dbTimeStamp"
+                      name="TimeEnd" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeDataRetrieval]"
+                      dataType="i4"
+                      name="TimeDataRetrieval" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeProcessing]"
+                      dataType="i4"
+                      name="TimeProcessing" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[TimeRendering]"
+                      dataType="i4"
+                      name="TimeRendering" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Source]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Source" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="40"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[ByteCount]"
+                      dataType="i8"
+                      name="ByteCount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[RowCount]"
+                      dataType="i8"
+                      name="RowCount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output].ExternalColumns[AdditionalInfo]"
+                      dataType="nText"
+                      name="AdditionalInfo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[InstanceName]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[InstanceName]"
+                      name="InstanceName" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ItemPath]"
+                      dataType="wstr"
+                      length="425"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ItemPath]"
+                      name="ItemPath" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[UserName]"
+                      dataType="wstr"
+                      length="260"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[UserName]"
+                      name="UserName" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ExecutionId]"
+                      dataType="wstr"
+                      length="64"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ExecutionId]"
+                      name="ExecutionId" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[RequestType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="13"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[RequestType]"
+                      name="RequestType" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Format]"
+                      dataType="wstr"
+                      length="26"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Format]"
+                      name="Format" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Parameters]"
+                      dataType="nText"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Parameters]"
+                      name="Parameters" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ItemAction]"
+                      codePage="1252"
+                      dataType="str"
+                      length="21"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ItemAction]"
+                      name="ItemAction" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeStart]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeStart]"
+                      name="TimeStart" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeEnd]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeEnd]"
+                      name="TimeEnd" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeDataRetrieval]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeDataRetrieval]"
+                      name="TimeDataRetrieval" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeProcessing]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeProcessing]"
+                      name="TimeProcessing" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeRendering]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[TimeRendering]"
+                      name="TimeRendering" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Source]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Source]"
+                      name="Source" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ByteCount]"
+                      dataType="i8"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ByteCount]"
+                      name="ByteCount" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[RowCount]"
+                      dataType="i8"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[RowCount]"
+                      name="RowCount" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[AdditionalInfo]"
+                      dataType="nText"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[AdditionalInfo]"
+                      name="AdditionalInfo" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - Load Recs if None Exist.Paths[OLE DB Source Output]"
+              endId="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Check Recs"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:DelayValidation="True"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CD380CC3-A25D-4505-95E7-3AEA7B8B72F0}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Check Recs"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{6010659C-E7A6-4DAF-9650-403F482349A7}"
+          SQLTask:SqlStatementSource="DECLARE @Date DATETIME&#xA;SELECT @Date = ?&#xA;&#xA;SELECT &#xA;&#x9;COUNT(TimeStart)&#xA;FROM &#xA;&#x9;Pro_SSRSExecutionLog.dbo.ExecutionLog (NOLOCK)&#xA;WHERE &#xA;&#x9;CONVERT(DATETIME, TimeStart) BETWEEN DATEADD(SS,1,DATEADD(SS, -1, @Date )) AND DATEADD(SS,-1,DATEADD(dd, 1, @Date ))&#xA;"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::intRecordCount" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::dtDateToLoad"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="7"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Create Database and perform Historical Load"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{15D2992F-CF1A-432A-987D-B96B71F25044}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Create Database and perform Historical Load"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F646125-715C-46D6-A4D9-B925DA3296C7}"
+          SQLTask:SqlStatementSource="&#xA;/*===========================================================================&#xA;Author: Brian K. McDonald, MCDBA, MCSD&#xA;Purpose: &#xA;&#x9;The purpose of this script is to create a database that could be&#xA;&#x9;used to maintain all report execution details returned by the&#xA;&#x9;ReportServer.dbo.ExecutionLog3 view. This script should only be run&#xA;&#x9;if the database does not already exist.&#xA;&#xA;===========================================================================*/&#xA;&#xA;IF NOT EXISTS (SELECT * FROM sys.sysdatabases WHERE name = 'Pro_SSRSExecutionLog')&#xA;&#xA;CREATE DATABASE Pro_SSRSExecutionLog&#xA;GO&#xA;&#xA;USE Pro_SSRSExecutionLog&#xA;GO&#xA;&#xA;CREATE TABLE [dbo].[ExecutionLog]&#xA;(&#xA; [ExecutionLogID] [int] PRIMARY KEY IDENTITY(1,1) NOT NULL,&#xA; [InstanceName] [nvarchar](38) NOT NULL,&#xA; [ItemPath] [nvarchar](425) NULL,&#xA; [UserName] [nvarchar](260) NULL,&#xA; [ExecutionId] [nvarchar](64) NULL,&#xA; [RequestType] [varchar](13) NOT NULL,&#xA; [Format] [nvarchar](26) NULL,&#xA; [Parameters] [ntext] NULL,&#xA; [ItemAction] [varchar](21) NOT NULL,&#xA; [TimeStart] [datetime] NOT NULL,&#xA; [TimeEnd] [datetime] NOT NULL,&#xA; [TimeDataRetrieval] [int] NOT NULL,&#xA; [TimeProcessing] [int] NOT NULL,&#xA; [TimeRendering] [int] NOT NULL,&#xA; [Source] [varchar](8) NOT NULL,&#xA; [Status] [nvarchar](40) NOT NULL,&#xA; [ByteCount] [bigint] NOT NULL,&#xA; [RowCount] [bigint] NOT NULL,&#xA; [AdditionalInfo] [xml] NULL&#xA;) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]&#xA;&#xA;GO&#xA;&#xA;--Load historical information&#xA;INSERT INTO ExecutionLog&#xA;SELECT * FROM ReportServer.dbo.ExecutionLog3&#xA;WHERE CONVERT(DATE, TimeStart) &lt; CONVERT(DATE, GETDATE())&#xA;ORDER BY TimeStart&#xA;&#xA;&#xA;/*=========================================================&#xA;The Pro_SSRS_Load_ExecutionLog package will be used&#xA;to keep this information up to date. The package will&#xA;need to be set to execute daily and return the records&#xA;for the prior day using a GETDATE()-1 methodology.&#xA;=========================================================*/" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Verify DB Exists"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A5429EA8-763A-42AF-8490-F5D3F07DFFEE}"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Verify DB Exists"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5F646125-715C-46D6-A4D9-B925DA3296C7}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.sysdatabases WHERE name = 'Pro_SSRSExecutionLog')&#xA;&#xA;&#x9;--database exists&#xA;&#x9;SELECT 1 AS blnDatabaseExists&#xA;&#xA;ELSE&#xA;&#xA;&#x9;--database does not exist&#xA;&#x9;SELECT 0 AS blnDatabaseExists"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::intDatabaseExists" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{175632D0-F900-4395-8338-06DA4E42B649}"
+      DTS:EvalOp="3"
+      DTS:Expression="@intDatabaseExists == 0"
+      DTS:From="Package\SQL - Verify DB Exists"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\SQL - Create Database and perform Historical Load" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{B3C37B93-BC77-49BB-89C7-738E3E01A4D4}"
+      DTS:EvalOp="3"
+      DTS:Expression="@intDatabaseExists == 1"
+      DTS:From="Package\SQL - Verify DB Exists"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\SQL - Check Recs" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{EFCB4DF2-7B4E-409A-AD8D-34F903AFBD13}"
+      DTS:EvalOp="3"
+      DTS:Expression="@intRecordCount == 0"
+      DTS:From="Package\SQL - Check Recs"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\DFT - Load Recs if None Exist" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql11">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="160,58"
+          Id="Package\DFT - Load Recs if None Exist"
+          TopLeft="212.292452830189,254.216981132075" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\SQL - Check Recs"
+          TopLeft="210.254716981132,181.27358490566" />
+        <NodeLayout
+          Size="168,75"
+          Id="Package\SQL - Create Database and perform Historical Load"
+          TopLeft="0.5,179.292452830189" />
+        <NodeLayout
+          Size="185,44"
+          Id="Package\SQL - Verify DB Exists"
+          TopLeft="120.292452830189,83.3867924528302" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="183.292452830189,127.38679245283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-98.7924528301887,51.9056603773585"
+              Start="0,0"
+              End="-98.7924528301887,44.4056603773585">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.0293029181581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.0293029181581"
+                    Point2="0,21.0293029181581"
+                    Point3="-4,21.0293029181581" />
+                  <mssgle:LineSegment
+                    End="-94.7924528301887,21.0293029181581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-94.7924528301887,21.0293029181581"
+                    Point2="-98.7924528301887,21.0293029181581"
+                    Point3="-98.7924528301887,25.0293029181581" />
+                  <mssgle:LineSegment
+                    End="-98.7924528301887,44.4056603773585" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-57.3962264150943,26.0293029181581,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="242.292452830189,127.38679245283">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.4622641509434,53.8867924528302"
+              Start="0,0"
+              End="49.4622641509434,46.3867924528302">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8319480677061" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8319480677061"
+                    Point2="0,21.8319480677061"
+                    Point3="4,21.8319480677061" />
+                  <mssgle:LineSegment
+                    End="45.4622641509434,21.8319480677061" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45.4622641509434,21.8319480677061"
+                    Point2="49.4622641509434,21.8319480677061"
+                    Point3="49.4622641509434,25.8319480677061" />
+                  <mssgle:LineSegment
+                    End="49.4622641509434,46.3867924528302" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.7311320754717,26.8319480677061,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="292.02358490566,223.27358490566">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.9433962264151"
+              Start="0,0"
+              End="0,23.4433962264151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.4433962264151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,3.72169811320757,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Author: Brian K. McDonald, MCDBA, MCSD&#xA;_____________________________________________________________&#xA;&#xA;1. Check to determine if the Pro_SSRSExecutionLog&#xA;2. If the database does not exist, create it and load an archive table&#xA;3. If the database does exist, then check to determine if the data for &#xA;    yesterday already exists in the archive table. Do nothing if the data exists, &#xA;    but if the data does not exist, go get the records from the ReportServer&#xA;    database.&#xA;&#xA;_____________________________________________________________&#xA;Note: If you were to run the package the first time, you could disable&#xA;or completely remove the Verify DB Exists and Create DB and Historical Load &#xA;Execute SQL Tasks.&#xA;_____________________________________________________________"
+          ParentId="Package"
+          Size="416,230"
+          Id="ca483b91-9dde-44ff-8767-8109585dfe59"
+          TopLeft="377.349056603774,82.4811320754717">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="11.25"
+              Color="#FF008000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+        <AnnotationLayout
+          Text="Package Name: &#xA;        Pro_SSRS_Load_ExecutionLog"
+          ParentId="Package"
+          Size="388,71"
+          Id="61ea7600-42c7-4dd8-8e00-a0fb651c40c5"
+          TopLeft="20.6320754716981,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="18.75"
+              Color="#FF000080"
+              Weight="Bold">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - Load Recs if None Exist">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="283.509433962265,43.9245283018868"
+          Id="Package\DFT - Load Recs if None Exist\OLEDST - Pro_SSRSExecutionLog"
+          TopLeft="5.5,132.858490566038" />
+        <NodeLayout
+          Size="283.509433962265,43.9245283018868"
+          Id="Package\DFT - Load Recs if None Exist\OLESRC - ReportServer ExecutionLog3"
+          TopLeft="5.5,57.4245283018868" />
+        <EdgeLayout
+          Id="Package\DFT - Load Recs if None Exist.Paths[OLE DB Source Output]"
+          TopLeft="147.235849056604,101.349056603774">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,31.5094339622642"
+              Start="0,0"
+              End="0,24.0094339622642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0094339622642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Straight data pull based on command with parameter&#xA;being passed in to get only dtDateToLoad"
+          ParentId="Package\DFT - Load Recs if None Exist"
+          Size="349.245283018868,NaN"
+          Id="f77d7deb-628a-41c2-8bc1-ea8d23a7430c"
+          TopLeft="11.5,5.5">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Family="Tahoma"
+              Size="11.25"
+              Color="#FF008000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

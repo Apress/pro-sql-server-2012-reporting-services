@@ -1,0 +1,14 @@
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\Employee_Class_Tester_VB.Resources.resources
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\Employee_Class_Tester_VB.Tester.resources
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\ResGen.read.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\ResGen.write.1.tlog
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\bin\Debug\Employee Class Tester VB.exe
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\bin\Debug\Employee Class Tester VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\bin\Debug\Employee Class Tester VB.xml
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\Employee Class Tester VB.exe
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\Employee Class Tester VB.xml
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\obj\x86\Debug\Employee Class Tester VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\bin\Debug\Employee VB.dll
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\bin\Debug\Employee VB.pdb
+C:\PRO_SSRS_Final\Chapter 7\Employee Class Tester VB\bin\Debug\Employee VB.xml
